@@ -1,0 +1,14 @@
+{
+  "name": "tixie.name",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "license": "Copyleft",
+  "devDependencies": {
+    "less": "^3.9.0",
+    "parcel-bundler": "^1.12.3"
+  }
+}

@@ -1,0 +1,25 @@
+/* ----------------------------------------------------------- */
+/* == Layout */
+/* ----------------------------------------------------------- */
+
+.bg-lines {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: @base-container;
+  height: 100vh;
+  border-right: .1rem solid #0e0e0e;
+  background-image: ~'repeating-linear-gradient(-90deg, #000 0%, #000 calc(100% / 6 - 2px), #0E0E0E calc(100% / 6))';
+  transform: translateX(-50%);
+  animation: .8s bg-lines-animation ease-out;
+}
+
+@keyframes bg-lines-animation {
+  from {
+    transform: translateX(-50%) translate3d(0, -110%, 0);
+  }
+  to {
+    transform: translateX(-50%) translate3d(0, 0, 0);
+  }
+}
