@@ -1,0 +1,116 @@
+/* ----------------------------------------------------------- */
+/* == rwd -> small */
+/* ----------------------------------------------------------- */
+
+@media (max-width: @small) {
+  /* Global
+  -------------------------------------------------------------- */
+
+  body {
+    font-size: 1.4em;
+  }
+
+  /* Navigation
+  -------------------------------------------------------------- */
+
+  .navigation__list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #000;
+    font-size: 1.4rem;
+  }
+
+  .navigation__list::before {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: .1rem;
+    background-image: linear-gradient(90deg, @color-secondary 0%, @color-primary 100%);
+    content: "";
+  }
+
+  .navigation__listItem {
+    flex-grow: 1;
+    width: ~'calc(100% / 4)';
+  }
+
+  .navigation__link:link,
+  .navigation__link:visited {
+    flex-grow: 1;
+    padding: 2rem 1rem;
+  }
+
+  .navigation__link:hover,
+  .navigation__link:active,
+  .navigation__link:focus {
+    border-color: transparent;
+    background-color: @color-primary;
+    color: @color-light-text;
+  }
+
+  .navigation__link::before,
+  .navigation__link::after {
+    content: none;
+  }
+
+  /* Lines header
+  -------------------------------------------------------------- */
+
+  .lines-header {
+    position: absolute;
+    right: 0;
+    margin-top: 0rem;
+    width: 75%;
+    transform: rotate(180deg);
+  }
+
+  /* Home header
+  -------------------------------------------------------------- */
+
+  .home-head {
+    margin-top: 30vh;
+  }
+
+  .home-head__title {
+    font-size: 6rem;
+  }
+
+  .home-head__about {
+    font-size: 1.4rem;
+  }
+
+  /* Section title
+  -------------------------------------------------------------- */
+
+  .title-section__title {
+    font-size: 6rem;
+  }
+
+  .line.title-section__line {
+    width: 75%;
+  }
+
+  /* Contact section
+  -------------------------------------------------------------- */
+
+  .contact {
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+  }
+
+  .contact__title {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+
+  /* Footer
+  -------------------------------------------------------------- */
+
+  .footer {
+    margin-bottom: 4rem;
+  }
+}

@@ -1,0 +1,65 @@
+/* ----------------------------------------------------------- */
+/* == Lines module */
+/* ----------------------------------------------------------- */
+
+.line {
+  position: relative;
+  height: .2rem;
+  background-image: linear-gradient(90deg, #17b1a7 0%, #642b6e 95%, #c1a4c1 100%);
+  animation: 1.5s lines-animation ease-in-out;
+  animation-delay: .5s;
+
+  animation-fill-mode: backwards;
+}
+
+.line::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 42rem;
+  box-shadow: 0 0 .5rem 0 rgba(255,255,255,.50);
+  content: "";
+  transform: translateY(-50%) translateX(50%);
+}
+
+/* animation */
+
+@keyframes lines-animation {
+  from {
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+    transform-origin: left;
+  }
+}
+
+/* Lines for header
+-------------------------------------------------------------- */
+
+.lines-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4rem 0;
+  width: 55%;
+  height: 8rem;
+}
+
+.lines-header__item:nth-child(1) {
+  animation-duration: 2.8s;
+  animation-delay: .75s;
+}
+
+.lines-header__item:nth-child(2) {
+  animation-duration: 3s;
+  animation-delay: .5s;
+}
+
+.lines-header__item:nth-child(3) {
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+}
