@@ -4,9 +4,9 @@
 
 .line {
   position: relative;
-  height: .2rem;
-  background-image: linear-gradient(90deg, #17b1a7 0%, #642b6e 95%, #c1a4c1 100%);
-  animation: 1.5s lines-animation ease-in-out;
+  height: .1rem;
+  background-image: linear-gradient(90deg, @color-secondary 0%, @color-primary 80%);
+  animation: 1.5s lines-animation cubic-bezier(.19,1,.22,1);
   animation-delay: .5s;
 
   animation-fill-mode: backwards;
@@ -14,25 +14,29 @@
 
 .line::after {
   position: absolute;
-  top: 50%;
   right: 0;
-  width: .6rem;
-  height: .6rem;
+  width: 1.1rem;
+  height: 1.1rem;
   border-radius: 42rem;
-  box-shadow: 0 0 .5rem 0 rgba(255,255,255,.50);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewbox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M5 1 Q5.8 4.2 9 5 Q5.8 5.8 5 9 Q4.2 5.8 1 5 Q4.2 4.2 5 1z' /%3E%3C/svg%3E%0A");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1.5rem 0 rgba(255,255,255,.70);
   content: "";
-  transform: translateY(-50%) translateX(50%);
+  transform: translateY(-.5rem) translateX(40%);
 }
 
 /* animation */
 
 @keyframes lines-animation {
   from {
-    transform: scale3d(0, 1, 1);
+    // transform: scale3d(0, 1, 1);
+    transform: translate3d(-110%, 0, 0);
     transform-origin: left;
   }
   to {
-    transform: scale3d(1, 1, 1);
+    // transform: scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0);
     transform-origin: left;
   }
 }
@@ -44,7 +48,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   margin: 4rem 0;
+  padding: 1rem 2rem;
+  padding-left: 0;
   width: 55%;
   height: 8rem;
 }
