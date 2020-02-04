@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+  <head>
+
+    {{ block "metaTitle" . }}
+      <title>{{ .Title }}</title>
+      <meta name="description" content="Designer • CSS Architect • Internetz Citizen">
+    {{ end }}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicons/apple-touch-icon.png" | absURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicons/favicon-32x32.png" | absURL }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicons/favicon-16x16.png" | absURL }}">
+    <link rel="manifest" href="{{ "/manifest.webmanifest" | absURL }}">
+    <link rel="mask-icon" href="{{ "/img/favicons/safari-pinned-tab.svg" | absURL }}" color="#ef40db">
+    <link rel="shortcut icon" href="{{ "/img/favicons/favicon.ico" | absURL }}">
+    <meta name="apple-mobile-web-app-title" content="Tixie">
+    <meta name="application-name" content="Tixie">
+    <meta name="msapplication-config" content="{{ "/browserconfig.xml" | absURL }}">
+    <meta name="theme-color" content="#ffffff">
+
+    {{ block "metaSocial" . }}
+      <!-- Open Graph -->
+      <meta property="og:url" content="/">
+      <meta property="og:title" content="Tixie">
+      <meta property="og:description" content="Designer • CSS Architect • Internetz Citizen">
+      <meta property="og:image" content="/img/favicons/android-chrome-512x512.png">
+      <meta property="og:image:width" content="512">
+      <meta property="og:image:height" content="512">
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Tixie">
+      <meta name="twitter:description" content="Designer • CSS Architect • Internetz Citizen">
+      <meta name="twitter:image" content="/img/favicons/android-chrome-192x192.png">
+    {{ end }}
+
+    {{ $scss := resources.Get "/scss/style.scss" }}
+    {{ $style := $scss | resources.ToCSS | minify | fingerprint }}
+    {{ $secureStyle := $style | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $secureStyle.Permalink }}" integrity="{{ $secureStyle.Data.Integrity }}">
+  </head>
+  <body>
+
+    {{ partial "header" . }}
+
+    {{ block "main" . }}{{ end }}
+
+    {{ partial "footer" . }}
+
+</html>
