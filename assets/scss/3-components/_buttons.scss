@@ -8,13 +8,12 @@
 /* ----------------------------------------------------------- */
 
 
-$btn-primary:       $color-primary;
-$btn-secondary:     $color-secondary;
-$btn-success:       #1cb841;
-$btn-danger:        #c53a3a;
-
-$btn-hover:         5%;
-$btn-radius:        0;
+$btn-primary: $color-primary;
+$btn-secondary: $color-secondary;
+$btn-success: #1cb841;
+$btn-danger: #c53a3a;
+$btn-hover: 5%;
+$btn-radius: 0;
 
 
 /* ----------------------------------------------------------- */
@@ -44,9 +43,9 @@ $btn-radius:        0;
 .btn--primary:link,
 .btn--primary:visited {
   position: relative;
-  border: .1rem solid fade($color-primary, 18%);
+  border: .1rem solid rgba($color-primary, .18);
   border-radius: 0;
-  background: none;
+  background: rgba($color-primary, .15);
   color: #fff;
 }
 

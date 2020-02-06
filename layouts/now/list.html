@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <div class="container">
+    <div class="content-head txtcenter">
+      <h1 class="content-title">What Am I Doing <span class="color-primary">Now</span>?</h1>
+      <p>A status list of what I’m focused on</p>
+      <div class="mb4">
+        <a class="btn btn--primary" href="">
+          <img class="vmiddle" src="/img/ico-rss.svg" alt="">
+          <span class="vmiddle">RSS</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="now">
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "now") }}
+      <div class="container container--medium">
+        {{ range sort $paginator.Pages "Date" "desc" }}
+          <div class="now-post">
+            <div class="now-post__date">{{ dateFormat "January 2, 2020" .Date }}</div>
+            <div class="now-post__box">
+              <div class="now-post__content">
+                {{ .Content }}
+              </div>
+            </div>
+          </div>
+        {{ end }}
+
+        <div class="now-pagination">Pagination</div>
+      </div>
+    </div>
+
+  </div>
+{{ end }}

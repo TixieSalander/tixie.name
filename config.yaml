@@ -1,0 +1,12 @@
+baseURL: http://tixie.name
+languageCode: en-us
+title: Tixie homepage 🏠
+disableKinds:
+- taxonomy
+- taxonomyTerm
+enableRobotsTXT: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+summaryLength: 40

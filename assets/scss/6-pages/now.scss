@@ -1,0 +1,85 @@
+/* ----------------------------------------------------------- */
+/* == Now page */
+/* ----------------------------------------------------------- */
+
+.now {
+  margin-bottom: 11rem;
+}
+
+/* Post
+-------------------------------------------------------------- */
+
+.now-post {
+  position: relative;
+}
+
+.now-post::before {
+  position: absolute;
+  top: 2.8rem;
+  left: .2rem;
+  width: 1rem;
+  height: 1rem;
+  border: .1rem solid $color-primary;
+  background: $color-secondary;
+  box-shadow: inset 0 0 0 .3rem #000;
+  content: "";
+  transition: none;
+  transform: rotate(45deg);
+}
+
+.now-post__date {
+  position: relative;
+  overflow: hidden;
+  padding-left: 5rem;
+  height: 30px;
+  color: #c7c7c7;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+.now-post__date::before {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 3.2rem;
+  height: 3rem;
+  background: url("/img/now-postline.svg") no-repeat;
+  background-size: 3.2rem 3rem;
+  content: "";
+}
+
+.now-post__box {
+  margin-bottom: 5rem;
+  padding: 4rem 5rem 5rem;
+  background-color: #191919;
+
+  clip-path: polygon(2.4rem 0, 100% 0, 100% 100%, 0 100%, 0 2.4rem);
+}
+
+.now-post__content {
+  font-size: 1.4rem;
+  line-height: 1.9em;
+}
+
+.now-post__content p {
+  margin-bottom: 1.9em;
+}
+
+.now-post__content p:last-child {
+  margin-bottom: 0;
+}
+
+.now-post__content img {
+  background-color: rgba(#fff, .3);
+}
+
+/* Pagination
+-------------------------------------------------------------- */
+
+.now-pagination {
+  padding-top: 1rem;
+  text-align: center;
+}
