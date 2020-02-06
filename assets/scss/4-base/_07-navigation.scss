@@ -24,14 +24,14 @@
   text-align: center;
   text-decoration: none;
   line-height: 1.5em;
-  transition: all .3s;
+  transition: border .3s;
 }
 
 .navigation__link:hover,
 .navigation__link:focus,
 .navigation__link:active {
   outline: none;
-  border: .1rem solid fade($color-primary, 18%);
+  border: .1rem solid rgba($color-primary, .18);
 }
 
 .navigation__link:hover::before,
