@@ -12,11 +12,11 @@
     <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicons/apple-touch-icon.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicons/favicon-32x32.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicons/favicon-16x16.png" | absURL }}">
+    <link rel="icon" type="image/svg+xml" href="{{ "/img/favicons/favicon.svg" | absURL }}">
+    <link rel="icon alternate" type="image/png" sizes="32x32" href="{{ "/img/favicons/favicon-32x32.png" | absURL }}">
+    <link rel="icon alternate" type="image/png" sizes="16x16" href="{{ "/img/favicons/favicon-16x16.png" | absURL }}">
     <link rel="manifest" href="{{ "/manifest.webmanifest" | absURL }}">
     <link rel="mask-icon" href="{{ "/img/favicons/safari-pinned-tab.svg" | absURL }}" color="#ef40db">
-    <link rel="shortcut icon" href="{{ "/img/favicons/favicon.ico" | absURL }}">
     <meta name="apple-mobile-web-app-title" content="Tixie">
     <meta name="application-name" content="Tixie">
     <meta name="msapplication-config" content="{{ "/browserconfig.xml" | absURL }}">
