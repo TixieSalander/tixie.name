@@ -38,7 +38,7 @@
     {{ end }}
 
     {{ $scss := resources.Get "/scss/style.scss" }}
-    {{ $style := $scss | resources.ToCSS | minify | fingerprint }}
+    {{ $style := $scss | resources.ToCSS | resources.PostCSS (dict "congig" ".postcssrc") | minify | fingerprint }}
     {{ $secureStyle := $style | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $secureStyle.Permalink }}" integrity="{{ $secureStyle.Data.Integrity }}">
   </head>
