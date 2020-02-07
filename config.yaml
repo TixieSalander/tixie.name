@@ -10,3 +10,30 @@ markup:
     renderer:
       unsafe: true
 summaryLength: 40
+menu:
+  nav:
+  - identifier: about
+    name: Me
+    title: Scroll to my personal infos
+    url: /#about
+    weight: 1
+  - identifier: projects
+    name: Projects
+    title: Scroll to my projects
+    url: /#projects
+    weight: 2
+  - identifier: links
+    name: Links
+    title: Scroll to my social links
+    url: /#links
+    weight: 3
+  - identifier: now
+    name: Now
+    title: Link to my micro-blog
+    url: /now/
+    weight: 4
+  - identifier: contact
+    name: Contact
+    title: Scroll to my contact infos
+    url: /#contact
+    weight: 5
