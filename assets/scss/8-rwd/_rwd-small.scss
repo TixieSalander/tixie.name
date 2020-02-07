@@ -18,11 +18,10 @@
     bottom: 0;
     left: 0;
     z-index: 2;
+    justify-content: space-around;
     width: 100%;
     background-color: #000;
     font-size: 1.4rem;
-
-    justify-content: space-around;
   }
 
   .navigation__list::before {
@@ -35,16 +34,14 @@
   }
 
   .navigation__listItem {
-    width: calc(100% / 4);
-
     flex-grow: 1;
+    width: calc(100% / 4);
   }
 
   .navigation__link:link,
   .navigation__link:visited {
-    padding: 2rem 1rem;
-
     flex-grow: 1;
+    padding: 2rem 1rem;
   }
 
   .navigation__link:hover,
@@ -115,5 +112,29 @@
 
   .footer {
     margin-bottom: 4rem;
+  }
+
+  /* Content
+  -------------------------------------------------------------- */
+
+  .content-head {
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+  }
+
+  .content-title {
+    margin-bottom: 0;
+    font-size: 3.5rem;
+  }
+
+  /* Now
+  -------------------------------------------------------------- */
+
+  .now > .container {
+    padding: 0;
+  }
+
+  .now-post__box {
+    padding: 3rem 3rem 3rem;
   }
 }
