@@ -1,0 +1,10 @@
+{
+  "name": "tixie.name",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^7.1.0"
+  },
+  "license": "MIT"
+}
