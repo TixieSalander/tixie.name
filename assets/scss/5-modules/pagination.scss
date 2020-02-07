@@ -1,0 +1,51 @@
+/* ----------------------------------------------------------- */
+/* == Pagination module */
+/* ----------------------------------------------------------- */
+
+.pagination {
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
+.pagination-current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.3rem 2rem;
+  min-width: 5rem;
+  border: .1rem solid rgba($color-primary, .18);
+  background-color: rgba($color-primary, .18);
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.pagination-btn,
+.pagination-btn:link,
+.pagination-btn:visited {
+  display: flex;
+  align-items: center;
+  padding: 1.3rem 1.7rem;
+  border: .1rem solid rgba($color-primary, .18);
+  background-color: rgba($color-primary, .07);
+  color: $color-primary;
+}
+
+.pagination-btn:hover,
+.pagination-btn:active,
+.pagination-btn:focus {
+  background-color: rgba($color-primary, .36);
+  color: #fff;
+}
+
+span.pagination-btn {
+  opacity: .3;
+}
+
+.pagination-btn--left {
+  border-right-color: transparent;
+}
+
+.pagination-btn--right {
+  border-left-color: transparent;
+}
