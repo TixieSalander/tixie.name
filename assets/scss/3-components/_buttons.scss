@@ -59,15 +59,15 @@ $btn-radius: 0;
 }
 
 .btn--primary::before {
-  bottom: 0;
-  left: 0;
+  bottom: -.1rem;
+  left: -.1rem;
   border-bottom: .1rem solid $color-primary;
   border-left: .1rem solid $color-primary;
 }
 
 .btn--primary::after {
-  top: 0;
-  right: 0;
+  top: -.1rem;
+  right: -.1rem;
   border-top: .1rem solid $color-primary;
   border-right: .1rem solid $color-primary;
 }
