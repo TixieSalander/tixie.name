@@ -27,6 +27,7 @@
   transition: border .3s;
 }
 
+.navigation__link.active,
 .navigation__link:hover,
 .navigation__link:focus,
 .navigation__link:active {
@@ -34,9 +35,11 @@
   border: .1rem solid rgba($color-primary, .18);
 }
 
+.navigation__link.active::before,
 .navigation__link:hover::before,
 .navigation__link:focus::before,
 .navigation__link:active::before,
+.navigation__link.active::after,
 .navigation__link:hover::after,
 .navigation__link:focus::after,
 .navigation__link:active::after {
@@ -47,6 +50,7 @@
   content: "";
 }
 
+.navigation__link.active::before,
 .navigation__link:hover::before,
 .navigation__link:focus::before,
 .navigation__link:active::before {
@@ -56,6 +60,7 @@
   border-left: .1rem solid $color-primary;
 }
 
+.navigation__link.active::after,
 .navigation__link:hover::after,
 .navigation__link:focus::after,
 .navigation__link:active::after {
