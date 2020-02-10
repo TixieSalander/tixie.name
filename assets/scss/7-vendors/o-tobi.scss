@@ -1,0 +1,12 @@
+/* ----------------------------------------------------------- */
+/* == Tobi override module */
+/* ----------------------------------------------------------- */
+
+.tobi {
+  background-color: rgba(#000, .94);
+}
+
+.tobi > button svg {
+  color: $color-primary;
+  stroke: $color-primary;
+}

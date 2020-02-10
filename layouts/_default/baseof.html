@@ -37,6 +37,8 @@
       <meta name="twitter:image" content="{{ "/img/favicons/android-chrome-192x192.png" | absURL }}">
     {{ end }}
 
+    {{ block "styles" . }}{{ end }}
+
     {{ $scss := resources.Get "/scss/style.scss" }}
     {{ $style := $scss | resources.ToCSS | resources.PostCSS (dict "congig" ".postcssrc") | minify | fingerprint }}
     {{ $secureStyle := $style | resources.Fingerprint "sha512" }}
@@ -50,4 +52,5 @@
 
     {{ partial "footer" . }}
 
+    {{ block "scripts" . }}{{ end }}
 </html>
