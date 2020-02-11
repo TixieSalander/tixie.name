@@ -1,6 +1,9 @@
 {{ define "metaTitle" }}
 <title>Now Page</title>
 <meta name="description" content="A status list of what I’m focused on">
+{{ with .OutputFormats.Get "RSS" }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end }}
 {{ end }}
 
 {{ define "metaSocial" }}
@@ -37,12 +40,14 @@
     <div class="content-head txtcenter">
       <h1 class="content-title">What Am I Doing <span class="color-primary">Now</span>?</h1>
       <p>A status list of what I’m focused on</p>
+      {{ with .OutputFormats.Get "RSS" }}
       <div>
-        <a class="btn btn--primary" href="">
+        <a class="btn btn--primary" href="{{ .Permalink }}">
           <img class="vmiddle" src="/img/ico-rss.svg" alt="">
           <span class="vmiddle">RSS</span>
         </a>
       </div>
+      {{ end }}
     </div>
 
     <div class="now">
