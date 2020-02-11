@@ -1,0 +1,20 @@
+{{ $paginator := .Paginator }}
+<!-- Pagination -->
+{{ if gt $paginator.TotalPages 1 }}
+  <div class="pagination">
+    {{ if $paginator.HasPrev }}
+      <a class="pagination-btn pagination-btn--left" href="{{ $paginator.Prev.URL }}">{{ partial "svg/pagination-left" . }}</a>
+    {{ else }}
+      <span class="pagination-btn disabled">{{ partial "svg/pagination-left" . }}</span>
+    {{ end }}
+    <div class="pagination-current">
+      {{ $paginator.PageNumber }}
+    </div>
+    {{ if $paginator.HasNext }}
+      <a class="pagination-btn pagination-btn--right" href="{{ $paginator.Next.URL }}">{{ partial "svg/pagination-right" . }}</a>
+    {{ else }}
+      <span class="pagination-btn disabled">{{ partial "svg/pagination-right" . }}</span>
+    {{ end }}
+    </div>
+  </div>
+{{ end}}
