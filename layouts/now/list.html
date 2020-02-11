@@ -53,6 +53,7 @@
     <div class="now">
       <div class="container container--medium">
         {{range $index, $element := (.Paginate ( where .Data.Pages "Type" "now")).Pages}}
+        {{ $page := . }}
           <div class="now-post">
             <div class="now-post__date">{{ .Date.Format "January 02, 2006" }}</div>
             <div class="now-post__box">
@@ -62,22 +63,23 @@
               {{ if (isset .Params "images" ) }}
                 <div class="now-post__gallery" data-now-gallery="{{ $index }}">
                   <div class="grid grid-now-gallery">
-                    {{ range .Params.images }}
-                      {{ $original := resources.Get . }}
-                      {{ $originalPermalink := $original.Permalink }}
-                      {{ $thumb := $original.Fill "117x117 center" }}
-                      {{ $thumb2x := $original.Fill "234x234 center" }}
-                      <a class="now-post__galleryItem" data-now-gallery-item href="{{ . }}">
-                        <img
-                        class="now-post__galleryImg"
-                        width="142"
-                        height="142"
-                        src="{{ $thumb.Permalink }}"
-                        srcset="{{ $thumb.Permalink }} 1x, {{ $thumb2x.Permalink }} 2x"
-                        alt="{{ . }}"
-                        >
-                      </a>
-                    {{ end }}
+                  <!-- gallery items -->
+                  {{ range .Params.images }}
+                    {{ $original := $page.Resources.GetMatch . }}
+                    {{ $originalPermalink := $original.Permalink }}
+                    {{ $thumb := $original.Fill "117x117 center" }}
+                    {{ $thumb2x := $original.Fill "234x234 center" }}
+                    <a class="now-post__galleryItem" data-now-gallery-item href="{{ $original.Permalink }}">
+                      <img
+                      class="now-post__galleryImg"
+                      width="142"
+                      height="142"
+                      src="{{ $thumb.Permalink }}"
+                      srcset="{{ $thumb.Permalink }} 1x, {{ $thumb2x.Permalink }} 2x"
+                      alt="{{ . }}"
+                      >
+                    </a>
+                  {{ end }}
                   </div>
                 </div>
               {{ end }}
