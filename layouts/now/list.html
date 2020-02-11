@@ -63,13 +63,11 @@
                       {{ $originalPermalink := $original.Permalink }}
                       {{ $thumb := $original.Fill "117x117 center" }}
                       {{ $thumb2x := $original.Fill "234x234 center" }}
-                      {{ $placeholder := $thumb.Resize "x1" }}
                       <a class="now-post__galleryItem" data-now-gallery-item href="{{ . }}">
                         <img
                         class="now-post__galleryImg"
                         width="142"
                         height="142"
-                        style="background-image: url(data:{{ $placeholder.MediaType }};base64,{{ $placeholder.Content | base64Encode }});"
                         src="{{ $thumb.Permalink }}"
                         srcset="{{ $thumb.Permalink }} 1x, {{ $thumb2x.Permalink }} 2x"
                         alt="{{ . }}"
