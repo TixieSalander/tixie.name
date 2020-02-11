@@ -1,0 +1,25 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Now Page</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent status of what I’m focused on</description>
+    <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
+    <language>{{ . }}</language>{{ end }}{{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{ with .OutputFormats.Get "RSS" }}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ end }}
+    {{ $nowPermalink := .Permalink}}
+    {{ $status := (where .Site.RegularPages "Section" "now") }}
+    {{ range sort $status "Date" "desc" }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ $nowPermalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+
+      <guid>{{ $nowPermalink }}</guid>
+      <description>{{ .Content | html }}</description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>
