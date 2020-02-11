@@ -2,7 +2,7 @@
 # local_backend: true
 backend:
   name: github
-  repo: TixieBorg/tixie.name-hugo
+  repo: TixieBorg/tixie.name
 media_folder: assets/upload
 public_folder: /upload
 collections:
