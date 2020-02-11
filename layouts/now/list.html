@@ -51,9 +51,8 @@
     </div>
 
     <div class="now">
-      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "now") }}
       <div class="container container--medium">
-        {{ range  $index, $element := sort $paginator.Pages "Date" "desc" }}
+        {{range $index, $element := (.Paginate ( where .Data.Pages "Type" "now")).Pages}}
           <div class="now-post">
             <div class="now-post__date">{{ .Date.Format "January 02, 2006" }}</div>
             <div class="now-post__box">

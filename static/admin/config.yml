@@ -13,6 +13,9 @@ collections:
     label: Now Status
     format: frontmatter
     folder: content/now
+    path: '{{slug}}/_index'
+    media_folder: ''
+    public_folder: '/now/{{slug}}'
     fields:
     - name: title
       label: Title
