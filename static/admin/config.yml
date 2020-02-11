@@ -15,7 +15,7 @@ collections:
     folder: content/now
     path: '{{slug}}/_index'
     media_folder: ''
-    public_folder: '/now/{{slug}}'
+    public_folder: ''
     fields:
     - name: title
       label: Title
@@ -26,6 +26,7 @@ collections:
     - name: body
       label: Content
       widget: markdown
+      buttons: ["italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
     - name: images
       label: Gallery
       widget: list
