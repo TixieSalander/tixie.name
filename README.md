@@ -1,31 +1,50 @@
-Tixie.name
-=========
+# Tixie.name
 
 Code of https://tixie.name
 
+
 ## Project setup
+
+### Install hugo
+[Install Documentation](https://gohugo.io/getting-started/installing/)
+
+### Launch dev server
+
 ```
-npm i
-```
-of if you don't want to impact the package-lock
-```
-npm ci
+hugo server
 ```
 
-### Compiles and hot-reloads for development
+### Build for production
+
 ```
-npm run serve
+hugo --baseURL $URL
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-If you want absolute public urls
-```
-npm run build -- --public-url https://tixie.name/
-```
+As it `$URL` is an env variable but you can harcode it in the build command.
 
-### License
 
-The project is under Copyleft
+## Use NetlifyCMS in local mode
+
+This website use [NetlifyCMS](https://www.netlifycms.org/) backoffice to manage albums easily.
+And it's possible to use it while working in local:
+
+### Install JS dependencies
+
+`npm i` (or `npm ci` if you don't want to impact the package-lock)
+
+### Run local API
+
+1. Uncomment `local_backend: true` in admin/config.yml (remember to not commit this change)
+2. While running [developement hugo server](#launch-dev-server) launch this command in another terminal: `npx netlify-cms-proxy-server`
+
+### Admin your website in local
+
+Go to you website's local url + `/admin` (by default it's `http://localhost:1313/admin`). Enjoy!
+
+
+## Credits
+  * [Higgcss](https://github.com/robinparisi/higgcss) - The minimal CSS framework I use as skeleton
+  * [Tobi](https://github.com/rqrauhvmra/Tobi/) - The minimal lib for lightbox
+
+## Licence
+The code (except the libraries I'm using) is on CopyLeft

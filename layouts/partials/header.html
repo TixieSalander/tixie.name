@@ -1,0 +1,24 @@
+<div class="bg-lines"></div>
+<div class="header">
+  <a class="header__logo" href="/">
+    <img class="header__logoImg" src="/img/logo.svg" alt="T" />
+  </a>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      {{ $url := .URL }}
+      {{ with .Site.Menus.nav }}
+        {{ range $menu := . }}
+          <li class="navigation__listItem">
+            <a class="navigation__link{{ if eq $url .URL }} active{{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </nav>
+</div>
+
+<div class="lines-header">
+  <div class="lines-header__item line w80"></div>
+  <div class="lines-header__item line w100"></div>
+  <div class="lines-header__item line w33"></div>
+</div>
