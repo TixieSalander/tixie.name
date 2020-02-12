@@ -10,6 +10,12 @@ Result of me trying to integrate a volume control in a music player I'm working 
 
 {{< image src="volume-control-all-dribbble-2.png" alt="Volume Controls Playthrough">}}
 
-Two solutions. The first one on mouse hover, the second is always visible. Maybe more easly usable but less obvious it's a volume control. Still work in progress tho.
+
+
+
 
 {{< image src="Volume control two mini@2x.png" alt="undefined">}}
+
+
+
+Two solutions. The first one on mouse hover, the second is always visible. Maybe more easly usable but less obvious it's a volume control. Still work in progress tho.
