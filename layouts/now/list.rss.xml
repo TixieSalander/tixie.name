@@ -10,7 +10,7 @@
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
     {{ $nowPermalink := .Permalink}}
-    {{ $status := (where .Site.RegularPages "Section" "now") }}
+    {{ $status := (where .Data.Pages "Type" "now") }}
     {{ range sort $status "Date" "desc" }}
     <item>
       <title>{{ .Title }}</title>
