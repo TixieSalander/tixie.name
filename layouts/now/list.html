@@ -55,7 +55,7 @@
         {{range $index, $element := (.Paginate ( where .Data.Pages "Type" "now")).Pages}}
         {{ $page := . }}
           <div class="now-post">
-            <div class="now-post__date">{{ .Date.Format "January 02, 2006" }}</div>
+            <div class="now-post__head">{{ .Date.Format "January 02, 2006" }} - <a href="{{ .Permalink }}">Permalink</a></div>
             <div class="now-post__box">
               <div class="now-post__content">
                 {{ .Content }}

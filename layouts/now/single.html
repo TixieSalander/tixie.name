@@ -1,0 +1,91 @@
+{{ define "metaTitle" }}
+<title>{{ .Title }} Now Page</title>
+<meta name="description" content="A status about what I’m focused on">
+  {{ with .Site.GetPage "/now" }}
+    {{ with .OutputFormats.Get "rss" }}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ define "metaSocial" }}
+  <!-- Open Graph -->
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="A status about what I’m focused on">
+  <meta property="og:image" content="{{ "/img/favicons/android-chrome-512x512.png" | absURL }}">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="A status about what I’m focused on">
+  <meta name="twitter:image" content="{{ "/img/favicons/android-chrome-192x192.png" | absURL }}">
+{{ end }}
+
+{{ define "styles" }}
+  {{ $tobiCSS := resources.Get "css/tobi.min.css" }}
+  {{ $tobiCSSsecure := $tobiCSS | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $tobiCSS.Permalink }}" integrity="{{ $tobiCSSsecure.Data.Integrity }}">
+{{ end }}
+
+{{ define "scripts" }}
+  {{ $tobyJS := resources.Get "/js/tobi.min.js" }}
+  {{ $nowGallery := resources.Get "js/now-gallery.js" }}
+  {{ $nowGalleryConcat := slice $tobyJS $nowGallery | resources.Concat "js/now-gallery-bundle.js" }}
+  {{ $nowGallerySecure := $nowGalleryConcat | resources.Fingerprint "sha512" }}
+  <script src="{{ $nowGalleryConcat.Permalink }}" integrity="{{ $nowGallerySecure.Data.Integrity }}"></script>
+{{ end }}
+
+{{ define "main" }}
+  <div class="container">
+    <div class="content-head txtcenter">
+      <h1 class="visually-hidden">{{ .Title }}</h1>
+      <div>A status about what I’m focused on</div>
+    </div>
+
+    <div class="now">
+      <div class="container container--medium">
+        <div class="now-post">
+          <div class="now-post__head">{{ .Date.Format "January 02, 2006" }}</div>
+          <div class="now-post__box">
+            <div class="now-post__content">
+              {{ .Content }}
+            </div>
+            {{ if (isset .Params "images" ) }}
+              <div class="now-post__gallery" data-now-gallery="0">
+                <div class="grid grid-now-gallery">
+                <!-- gallery items -->
+                {{ $page := . }}
+                {{ range .Params.images }}
+                  {{ $original := $page.Resources.GetMatch . }}
+                  {{ $originalPermalink := $original.Permalink }}
+                  {{ $thumb := $original.Fill "117x117 center" }}
+                  {{ $thumb2x := $original.Fill "234x234 center" }}
+                  <a class="now-post__galleryItem" data-now-gallery-item href="{{ $original.Permalink }}">
+                    <img
+                    class="now-post__galleryImg"
+                    width="142"
+                    height="142"
+                    src="{{ $thumb.Permalink }}"
+                    srcset="{{ $thumb.Permalink }} 1x, {{ $thumb2x.Permalink }} 2x"
+                    alt="{{ . }}"
+                    >
+                  </a>
+                {{ end }}
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+        <div class="txtcenter">
+          <a class="btn btn--primary" href="{{ .Permalink }}">
+            <img class="vmiddle" src="/img/ico-arrow-left.svg" alt="">
+            <span class="vmiddle">Back to Now Page</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{{ end }}
