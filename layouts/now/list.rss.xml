@@ -9,15 +9,14 @@
     {{ with .OutputFormats.Get "RSS" }}
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ $nowPermalink := .Permalink}}
     {{ $status := (where .Data.Pages "Type" "now") }}
     {{ range sort $status "Date" "desc" }}
     <item>
       <title>{{ .Title }}</title>
-      <link>{{ $nowPermalink }}</link>
+      <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
 
-      <guid>{{ $nowPermalink }}</guid>
+      <guid>{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
     </item>
     {{ end }}
