@@ -4,7 +4,6 @@ title: Tixie homepage 🏠
 disableKinds:
 - taxonomy
 - taxonomyTerm
-enableRobotsTXT: true
 markup:
   goldmark:
     renderer:
