@@ -10,4 +10,6 @@ Result of me trying to integrate a volume control in a music player I'm working 
 
 {{< image src="volume-control-all-dribbble-2.png" alt="Volume Controls Playthrough">}}
 
+
+
 {{< image src="Volume control two mini@2x.png" alt="undefined">}}
