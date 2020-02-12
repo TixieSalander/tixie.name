@@ -5,7 +5,7 @@
   </a>
   <nav class="navigation">
     <ul class="navigation__list">
-      {{ $url := .URL }}
+      {{ $url := .Permalink }}
       {{ with .Site.Menus.nav }}
         {{ range $menu := . }}
           <li class="navigation__listItem">
