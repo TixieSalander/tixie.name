@@ -29,7 +29,7 @@
   }
 }
 
-.now-post__date {
+.now-post__head {
   position: relative;
   overflow: hidden;
   padding-left: 2.5rem;
@@ -43,12 +43,12 @@
 }
 
 @supports (clip-path: fill-box) {
-  .now-post__date {
+  .now-post__head {
     padding-left: 5rem;
   }
 }
 
-.now-post__date::before {
+.now-post__head::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,10 +61,21 @@
 }
 
 @supports (clip-path: fill-box) {
-  .now-post__date::before {
+  .now-post__head::before {
     left: 1rem;
     width: 3.2rem;
   }
+}
+
+.now-post__head a {
+  color: #c7c7c7;
+  text-decoration: none;
+}
+
+.now-post__head a:hover,
+.now-post__head a:active,
+.now-post__head a:focus {
+  text-decoration: underline;
 }
 
 .now-post__box {
