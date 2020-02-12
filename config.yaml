@@ -4,6 +4,7 @@ title: Tixie homepage 🏠
 disableKinds:
 - taxonomy
 - taxonomyTerm
+- sitemap
 markup:
   goldmark:
     renderer:
