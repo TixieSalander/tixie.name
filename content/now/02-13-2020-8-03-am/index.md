@@ -22,3 +22,7 @@ It's working only on Firefox (my main browser) for now, because of the browser-s
 For the people on another browser, i should looks like this at the end:
 
 {{< image src="6f4a5b4a18e3f020.gif" alt="an animated demo of triangle volume control">}}
+
+Customizing an `input type="range"` is mainly made with pseudo elements, but my main difficulty was making a triangle shape with rounded edges. To achieve that i used the very useful property **clip-path**. It allow to creates a mask around your element with a shape you choose. It could be a polygon, but also a svg path. 
+
+This is this last option that was useful: I've just had to copy/paste my svg path from my UI design app (Figma ❤️) and that was it, i had a beautiful volume control!
