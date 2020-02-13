@@ -14,7 +14,10 @@ Spoiler: I've successfuly done a working prototype!
 
 It's working only on Firefox (my main browser) for now, because of the browser-specific pseudo-elements, but I'm planning to use a PostCSS plugin (like [this one](https://github.com/jonathantneal/postcss-input-range)) to do the dirty work for me.
 
-<p><iframe height="244" style="width: 100%;" scrolling="no" title="Customized Range POC" src="https://codepen.io/Tixie/embed/preview/MWwgoRR?height=244&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true"></p>
+<p><iframe height="244" style="width: 100%;" scrolling="no" title="Customized Range POC" src="https://codepen.io/Tixie/embed/preview/MWwgoRR?height=244&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/Tixie/pen/MWwgoRR'>Customized Range POC</a> by Tixie
+  (<a href='https://codepen.io/Tixie'>@Tixie</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe></p>
 
 For the people on another browser, i should looks like this at the end:
 
