@@ -16,6 +16,6 @@ It's working only on Firefox (my main browser) for now, because of the browser-s
 
 <p><iframe height="244" style="width: 100%;" scrolling="no" title="Customized Range POC" src="https://codepen.io/Tixie/embed/preview/MWwgoRR?height=244&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true"></p>
 
-For the people on another browser, i should looks like at the end:
+For the people on another browser, i should looks like this at the end:
 
 {{< image src="6f4a5b4a18e3f020.gif" alt="an animated demo of triangle volume control">}}
