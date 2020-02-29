@@ -1,3 +1,3 @@
 
 {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
-  <p><img src="{{ $image.RelPermalink }}" alt="{{ .Get "alt" }}"></p>
+  <p><a href="{{ $image.RelPermalink }}" data-now-gallery data-group="{{ $.Page.Params.date }}"><img src="{{ $image.RelPermalink }}" alt="{{ .Get "alt" }}"></a></p>
