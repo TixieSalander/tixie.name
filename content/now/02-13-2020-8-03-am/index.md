@@ -6,7 +6,7 @@ Update on my volume control work: I decided the control should be always visible
 
 So i tried to make something similar to the Vimeo player: a right triangle.
 
-{{< image src="Volume control triangle.png" alt="player showcase with a right triangle volume control">}}
+{{< image src="Volume-control-triangle.png" alt="player showcase with a right triangle volume control">}}
 
 The next question was: would it be codable, since i wanted to keep it as an `input type="range"` (for accessibility reason but also because i didn't wanted to code all the component's interactivity).
 
@@ -23,6 +23,6 @@ For the people on another browser, i should looks like this at the end:
 
 {{< image src="6f4a5b4a18e3f020.gif" alt="an animated demo of triangle volume control">}}
 
-Customizing an `input type="range"` is mainly made with pseudo elements, but my main difficulty was making a triangle shape with rounded edges. To achieve that i used the very useful property **clip-path**. It allow to creates a mask around your element with a shape you choose. It could be a polygon, but also a svg path. 
+Customizing an `input type="range"` is mainly made with pseudo elements, but my main difficulty was making a triangle shape with rounded edges. To achieve that i used the very useful property **clip-path**. It allow to creates a mask around your element with a shape you choose. It could be a polygon, but also a svg path.
 
 This is this last option that was useful: I've just had to copy/paste my svg path from my UI design app (Figma ❤️) and that was it, i had a beautiful volume control!
