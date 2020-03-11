@@ -38,12 +38,11 @@
 
 .contact__send {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 0 auto;
   margin-top: 6rem;
   max-width: 66.7rem;
-
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .contact__sendText {
@@ -57,13 +56,12 @@
 .contact__sendItem:visited {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2rem;
   border: .1rem solid transparent;
   text-align: center;
   text-decoration: none;
   transition: border .2s;
-
-  align-items: center;
 }
 
 .contact__sendItem:hover,
@@ -73,5 +71,7 @@
 
 img.contactSendIcon {
   margin-bottom: 1.5rem;
-  width: 2rem;
+  width: auto;
+
+  heigh: 2.2rem;
 }
