@@ -96,6 +96,10 @@
   margin-bottom: 1.9em;
 }
 
+.now-post__content h2 {
+  @include flow(20);
+}
+
 .now-post__content p:last-child {
   margin-bottom: 0;
 }
@@ -104,11 +108,27 @@
   background-color: rgba(#fff, .3);
 }
 
+.now-post__content li {
+  list-style-type: "• ";
+}
+
 .now-post__content code {
   padding: .3rem .5rem;
   border-radius: .3rem;
   background-color: rgba(239, 240, 244, .15);
   font-size: 85%;
+}
+
+.now-post__content pre {
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.now-post__content pre code {
+  padding: 0;
+  border-radius: .3rem;
+  background: none;
+  font-size: inherit;
 }
 
 /* Gallery
