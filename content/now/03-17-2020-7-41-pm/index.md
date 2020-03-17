@@ -28,6 +28,6 @@ The final result will look at something like that:
 </div>
 ```
 
-To go go further a bit, i can imagine a solution where you generate a placeholder of 50x50px and add a `background-size: cover` in your css to have a blurred version for your placeholder.
+To go further a bit, i can imagine a solution where you generate a placeholder of 50x50px and add a `background-size: cover` in your css to have a blurred version for your placeholder.
 
 Don't hesitate to contact me if you use this trick on your own project. I'm always curious of what can be done with it!
