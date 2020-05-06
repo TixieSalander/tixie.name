@@ -10,7 +10,7 @@ markup:
     renderer:
       unsafe: true
 summaryLength: 40
-paginate: 20
+paginate: 10
 menu:
   nav:
   - identifier: about
