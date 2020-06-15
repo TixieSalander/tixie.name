@@ -53,7 +53,7 @@
               {{ .Content }}
             </div>
             {{ if (isset .Params "images" ) }}
-              <div class="now-post__gallery" data-now-gallery="0">
+              <div class="now-post__gallery">
                 <div class="grid grid-now-gallery">
                 <!-- gallery items -->
                 {{ $page := . }}
@@ -62,7 +62,7 @@
                   {{ $originalPermalink := $original.Permalink }}
                   {{ $thumb := $original.Fill "117x117 center" }}
                   {{ $thumb2x := $original.Fill "234x234 center" }}
-                  <a class="now-post__galleryItem" data-now-gallery-item href="{{ $original.Permalink }}">
+                  <a class="now-post__galleryItem" data-now-gallery data-group="0" href="{{ $original.Permalink }}">
                     <img
                     class="now-post__galleryImg"
                     width="142"
