@@ -104,7 +104,7 @@
   margin-bottom: 0;
 }
 
-.now-post__content img {
+.now-post__content img:not([src$=".png"]) {
   background-color: rgba(#fff, .3);
 }
 
