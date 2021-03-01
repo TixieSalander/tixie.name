@@ -14,15 +14,15 @@ I even had the luxury to going out from hospitalization and discovering the city
 
 {{< image src="2021-hospital-snow.jpg" alt="The hospital courtyard under the snow">}}
 
-After the hard part of recovery, to avoid boredom I decided, since the site was down anyway, to recode [Vanilla List](https://vanillalist.top/), but this time on a stack I could manage (bye rails & postgre).
+After the hard part of recovery, to avoid boredom I decided, since the site was down anyway, to recode [Vanilla List](https://vanillalist.top/), but this time on a stack I could manage (bye rails & postgres).
 
-Goals: fast & light, static generated, and without the Hugo pain-in-the-ass templating language.
+Goals: fast & light, statically-generated, and without the Hugo pain-in-the-ass templating language.
 
-I tried [Eleventy](https://www.11ty.dev): it was simple, easy to setup, fast and I was free on templating. This last point was really great, I had a lot of fun playing with Nunjucks and JavaScript Template literals.
+I tried [Eleventy](https://www.11ty.dev): it was simple, easy to setup, fast and I could handle the templating how I wanted. This last point was really great, I had a lot of fun playing with Nunjucks and JavaScript Template literals.
 
-Actually it took me some time to make something functional while being high on meds half of the time and with a concentration time of max 30s 😅 but hey it's working for now.
+Actually it took me some time to make something functional while being high on meds half of the time and with a attention span of max 30s. 😅 But hey it's working for now.
 
-At the end I took the opportunity to redesign+rewrite the frontend part and tried my best to optimize it.
+At the end I seized the opportunity to redesign+rewrite the frontend part and tried my best to optimize it.
 
 👉 Enjoy the new [Vanilla List](https://vanillalist.top/)!
 
