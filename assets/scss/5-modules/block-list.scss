@@ -15,12 +15,17 @@
   font-size: 2.4rem;
 }
 
+.blockList__item:hover .blockList__itemTitle {
+  text-decoration: underline;
+}
+
 .blockList__itemAbout {
   margin: 0;
   color: #d0d0d0;
-  transition: transform .2s;
+  transition: all .2s;
 }
 
 .blockList__item:hover .blockList__itemAbout {
-  transform: translateX(1rem);
+  font-style: italic;
+  transform: translateX(.5rem);
 }
