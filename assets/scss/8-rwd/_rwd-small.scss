@@ -20,8 +20,8 @@
     z-index: 2;
     justify-content: space-around;
     width: 100%;
-    background-color: #000;
     font-size: 1.4rem;
+    background-color: #000;
   }
 
   .navigation__list::before {
@@ -30,7 +30,7 @@
     width: 100%;
     height: .1rem;
     background-image: linear-gradient(90deg, $color-secondary 0%, $color-primary 100%);
-    content: "";
+    content: '';
   }
 
   .navigation__listItem {
@@ -48,9 +48,9 @@
   .navigation__link:hover,
   .navigation__link:active,
   .navigation__link:focus {
-    border-color: transparent;
-    background-color: $color-primary;
     color: $color-light-text;
+    background-color: $color-primary;
+    border-color: transparent;
   }
 
   .navigation__link::before,
@@ -64,8 +64,8 @@
   .lines-header {
     position: absolute;
     right: 0;
-    margin-top: 0rem;
     width: 75%;
+    margin-top: 0rem;
     transform: rotate(180deg);
   }
 

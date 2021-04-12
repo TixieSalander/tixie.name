@@ -20,10 +20,10 @@
 .navigation__link:visited {
   position: relative;
   padding: 1rem 3rem;
-  border: .1rem solid transparent;
+  line-height: 1.5em;
   text-align: center;
   text-decoration: none;
-  line-height: 1.5em;
+  border: .1rem solid transparent;
   transition: border .3s;
 }
 
@@ -31,8 +31,8 @@
 .navigation__link:hover,
 .navigation__link:focus,
 .navigation__link:active {
-  outline: none;
   border: .1rem solid rgba($color-primary, .18);
+  outline: none;
 }
 
 .navigation__link.active::before,
@@ -47,7 +47,7 @@
   z-index: -1;
   width: 1rem;
   height: 1rem;
-  content: "";
+  content: '';
 }
 
 .navigation__link.active::before,

@@ -9,19 +9,19 @@ html {
 }
 
 body {
-  background-color: #000;
   color: $color-light-text;
   font-family: $fontstack1;
+  background-color: #000;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
+  max-width: $base-container;
   margin-right: auto;
   margin-left: auto;
   padding: 0;
-  max-width: $base-container;
 }
 
 .container--medium {
@@ -74,9 +74,9 @@ ul {
 
 hr {
   display: block;
+  height: .1rem;
   margin: 1em 0;
   padding: 0;
-  height: .1rem;
   border: 0;
   border-top: .1rem solid #ccc;
 }

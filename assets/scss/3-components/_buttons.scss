@@ -23,15 +23,15 @@ $btn-radius: 0;
 .btn {
   display: inline-block;
   padding: .8em 1.6em;
-  border: none;
-  border-radius: $btn-radius;
-  background-color: $color-primary;
-  box-shadow: none;
   color: #fff;
-  vertical-align: middle;
+  line-height: normal;
   text-align: center;
   text-decoration: none !important;
-  line-height: normal;
+  vertical-align: middle;
+  background-color: $color-primary;
+  border: none;
+  border-radius: $btn-radius;
+  box-shadow: none;
   cursor: pointer;
   transition: all .4s;
 }
@@ -43,10 +43,10 @@ $btn-radius: 0;
 .btn--primary:link,
 .btn--primary:visited {
   position: relative;
+  color: #fff;
+  background: rgba($color-primary, .15);
   border: .1rem solid rgba($color-primary, .18);
   border-radius: 0;
-  background: rgba($color-primary, .15);
-  color: #fff;
 }
 
 .btn--primary::before,
@@ -55,7 +55,7 @@ $btn-radius: 0;
   z-index: -1;
   width: 1rem;
   height: 1rem;
-  content: "";
+  content: '';
 }
 
 .btn--primary::before {
@@ -81,8 +81,8 @@ $btn-radius: 0;
 .btn--secondary,
 .btn--secondary:link,
 .btn--secondary:visited {
-  background-color: $btn-secondary;
   color: #fff;
+  background-color: $btn-secondary;
 }
 
 .btn--secondary:hover,
@@ -94,8 +94,8 @@ $btn-radius: 0;
 .btn--danger,
 .btn--danger:link,
 .btn--danger:visited {
-  background-color: $btn-danger;
   color: #fff;
+  background-color: $btn-danger;
 }
 
 
