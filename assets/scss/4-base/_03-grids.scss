@@ -34,6 +34,7 @@ $grid-mb: 6rem;
 }
 
 @media (max-width: $xsmall) {
+
   .grid-1-xs {
     @include grid(1, $grid-gutter, $grid-mb);
   }

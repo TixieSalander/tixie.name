@@ -4,7 +4,10 @@
   "description": "",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
-    "postcss-cli": "^7.1.0"
+    "postcss-cli": "^7.1.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.1.0"
   },
   "license": "MIT"
 }

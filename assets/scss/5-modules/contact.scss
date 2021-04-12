@@ -17,12 +17,12 @@
   left: 50%;
   width: 3rem;
   height: 3rem;
-  border: .1rem solid $color-primary;
   background: $color-secondary;
+  border: .1rem solid $color-primary;
   box-shadow: inset 0 0 0 .5rem #000;
-  content: "";
-  transition: none;
   transform: translateX(-50%) rotate(45deg);
+  transition: none;
+  content: '';
 }
 
 .contact__title {
@@ -40,15 +40,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  max-width: 66.7rem;
   margin: 0 auto;
   margin-top: 6rem;
-  max-width: 66.7rem;
 }
 
 .contact__sendText {
   display: block;
-  margin-bottom: 1.5rem;
   width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .contact__sendItem,
@@ -58,9 +58,9 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  border: .1rem solid transparent;
   text-align: center;
   text-decoration: none;
+  border: .1rem solid transparent;
   transition: border .2s;
 }
 
@@ -70,8 +70,7 @@
 }
 
 img.contactSendIcon {
-  margin-bottom: 1.5rem;
   width: auto;
-
-  heigh: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 1.5rem;
 }
