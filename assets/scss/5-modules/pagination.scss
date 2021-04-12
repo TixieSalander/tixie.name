@@ -13,7 +13,7 @@
   justify-content: center;
   min-width: 5rem;
   padding: 1.3rem 2rem;
-  color: #fff;
+  color: $color-light-text;
   font-size: 1.6rem;
   text-align: center;
   background-color: rgba($color-primary, .18);
@@ -34,7 +34,7 @@
 .pagination-btn:hover,
 .pagination-btn:active,
 .pagination-btn:focus {
-  color: #fff;
+  color: $color-light-text;
   background-color: rgba($color-primary, .36);
 }
 
