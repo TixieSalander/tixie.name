@@ -4,7 +4,6 @@
 
 html {
   overflow-x: hidden;
-
   scroll-behavior: smooth;
 }
 
@@ -12,7 +11,6 @@ body {
   color: $color-light-text;
   font-family: $fontstack1;
   background-color: #000;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
