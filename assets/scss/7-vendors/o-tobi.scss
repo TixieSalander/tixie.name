@@ -10,3 +10,11 @@
   color: $color-primary;
   stroke: $color-primary;
 }
+
+.tobi__slider__slide__content > figure > figcaption {
+  transform: translateY(100%);
+  padding: .5em 1em;
+  text-align: center;
+  background-color: #202020;
+  color: #c2c3c6;
+}
