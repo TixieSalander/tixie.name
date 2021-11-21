@@ -7,7 +7,6 @@ class NowGallery {
   init () {
     this.gallery = new Tobi({
       selector: this.items,
-      captions: false,
       zoom: false
     })
   }
