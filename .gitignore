@@ -2,3 +2,13 @@ public/
 resources/_gen
 node_modules
 .cache
+.DS_Store
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
