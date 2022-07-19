@@ -3,6 +3,7 @@ resources/_gen
 node_modules
 .cache
 .DS_Store
+.hugo_build.lock
 
 # Editor directories and files
 .idea

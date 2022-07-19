@@ -1,0 +1,52 @@
+baseURL = "http://tixie.name"
+languageCode = "en-us"
+title = "Tixie homepage 🏠"
+disableKinds = [ "taxonomy", "taxonomyTerm", "sitemap" ]
+summaryLength = 40
+paginate = 10
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[security]
+    [security.funcs]
+    getenv = [ "^HUGO_", "CONTEXT", "URL" ]
+
+# ----------------
+# Navigation links
+# ----------------
+
+[[menu.nav]]
+identifier = "about"
+name = "Me"
+title = "Scroll to my personal infos"
+url = "/#about"
+weight = 1
+
+[[menu.nav]]
+identifier = "projects"
+name = "Projects"
+title = "Scroll to my projects"
+url = "/#projects"
+weight = 2
+
+[[menu.nav]]
+identifier = "links"
+name = "Links"
+title = "Scroll to my social links"
+url = "/#links"
+weight = 3
+
+[[menu.nav]]
+identifier = "now"
+name = "Now"
+title = "Link to my micro-blog"
+url = "/now/"
+weight = 4
+
+[[menu.nav]]
+identifier = "contact"
+name = "Contact"
+title = "Scroll to my contact infos"
+url = "/#contact"
+weight = 5
