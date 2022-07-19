@@ -47,4 +47,5 @@ Go to you website's local url + `/admin` (by default it's `http://localhost:1313
   * [Tobi](https://github.com/rqrauhvmra/Tobi/) - The minimal lib for lightbox
 
 ## Licence
-The code (except the libraries I'm using) is on CopyLeft
+  * Content (blog posts for example) are under [CC BY SA](http://creativecommons.org/licenses/by-sa/4.0/), except other folks showcased work who belong to their respective owners.
+  * Code (except the libraries I'm using) is on CopyLeft, enjoy.
