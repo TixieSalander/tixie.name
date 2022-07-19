@@ -1,8 +1,11 @@
 ---
-local_backend: true
+# local_backend: true
 backend:
   name: github
   repo: TixieBorg/tixie.name
+  branch: main
+site_url: https://tixie.name
+display_url: https://tixie.name/now
 media_folder: assets/upload
 public_folder: /upload
 collections:
@@ -13,7 +16,8 @@ collections:
     label: Now Status
     format: frontmatter
     folder: content/now
-    path: '{{slug}}/index'
+    sortable_fields: ['date']
+    preview_path: now/{{slug}}
     media_folder: ''
     public_folder: ''
     fields:
