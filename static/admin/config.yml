@@ -17,6 +17,7 @@ collections:
     label: Now Status
     format: frontmatter
     folder: content/now
+    path: '{{slug}}/index'
     sortable_fields: ['date']
     preview_path: now/{{slug}}
     media_folder: ''
@@ -31,8 +32,9 @@ collections:
     - name: body
       label: Content
       widget: markdown
-      buttons: ["italic", "code", "link", "quote", "code-block", "bulleted-list", "numbered-list"]
+      buttons: ["bold", "italic", "code", "link", "quote", "code", "bulleted-list", "numbered-list"]
     - name: images
+      required: false
       label: Gallery
       widget: list
       allow_add: true
