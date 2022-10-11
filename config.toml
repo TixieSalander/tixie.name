@@ -19,34 +19,34 @@ unsafe = true
 [[menu.nav]]
 identifier = "about"
 name = "Me"
-title = "Scroll to my personal infos"
+title = "Personal infos"
 url = "/#about"
 weight = 1
 
 [[menu.nav]]
 identifier = "projects"
 name = "Projects"
-title = "Scroll to my projects"
+title = "My projects"
 url = "/#projects"
 weight = 2
 
 [[menu.nav]]
 identifier = "links"
 name = "Links"
-title = "Scroll to my social links"
+title = "Social links"
 url = "/#links"
 weight = 3
 
 [[menu.nav]]
 identifier = "now"
 name = "Now"
-title = "Link to my micro-blog"
+title = "Micro-blog"
 url = "/now/"
 weight = 4
 
 [[menu.nav]]
 identifier = "contact"
 name = "Contact"
-title = "Scroll to my contact infos"
+title = "Contact infos"
 url = "/#contact"
 weight = 5

@@ -1,7 +1,7 @@
 <div class="bg-lines"></div>
 <div class="header">
-  <a class="header__logo" href="/">
-    <img class="header__logoImg" src="/img/logo.svg" alt="T" />
+  <a class="header__logo" href="/" title="Homepage" aria-label="Homepage">
+      <img class="header__logoImg" src="/img/logo.svg" alt="Tixie's Logo" />
   </a>
   <nav class="navigation">
     <ul class="navigation__list">
@@ -9,7 +9,7 @@
       {{ with .Site.Menus.nav }}
         {{ range $menu := . }}
           <li class="navigation__listItem">
-            <a class="navigation__link{{ if eq $url .URL }} active{{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+            <a class="navigation__link{{ if eq $url .URL }} active{{ end }}" href="{{ .URL }}" title="{{ .Title }}" aria-label="{{ .Title }}">{{ .Name }}</a>
           </li>
         {{ end }}
       {{ end }}
