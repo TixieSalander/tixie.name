@@ -1,9 +1,8 @@
 ---
 title: How to make colored placeholder on Hugo
+show_title: true
 date: 2020-03-17T18:41:53.010Z
 ---
-## How to make colored placeholder on Hugo
-
 While using [Hugo](https://gohugo.io/) as a static site generator, I've found a way to generate a colored placeholder with a little trick.
 
 I used it on my [music sharing website](https://music.glitch.family/) for example:
