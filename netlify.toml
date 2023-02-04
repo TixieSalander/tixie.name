@@ -17,3 +17,9 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
+
+[[redirects]]
+  from = "/now/03-17-2020-7-41-pm/"
+  to = "/now/03-17-2020-7-41-pm-make-colored-placeholder-hugo/"
+  status = 301
+  force = true
