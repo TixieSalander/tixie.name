@@ -1,5 +1,5 @@
 ---
-# local_backend: true
+local_backend: true
 backend:
   name: github
   repo: TixieBorg/tixie.name
@@ -26,6 +26,10 @@ collections:
     - name: title
       label: Title
       widget: string
+    - name: show_title
+      label: Show Title
+      widget: boolean
+      default: false
     - name: date
       label: Date
       widget: datetime
