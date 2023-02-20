@@ -10,7 +10,7 @@ Hey there,\
 Long time no see, I was busy dealing with a burn out and preparing an upcoming surgery at the same time, funny moments lmao 🙃.
 
 You're reading this post so yeah, the surgery went pretty well, I'm good now.\
-I even had the luxury to going out from hospitalization and discovering the city under the snow (well… while trying to walk correctly). 
+I even had the luxury to going out from hospitalization and discovering the city under the snow (well… while trying to walk correctly).
 
 {{< image src="2021-hospital-snow.jpg" alt="The hospital courtyard under the snow">}}
 
@@ -29,7 +29,7 @@ At the end I seized the opportunity to redesign+rewrite the frontend part and tr
 {{< image src="vanillalist-screenshot-showcase.png" alt="New design showcase">}}
 
 That's it for the news. 2020 was a rough year for me and I don't expect 2021 to be better. \
-But I'm not alone at Glitch.Family (my "two-women-one-cat-and-some-friends little studio" as I like to call it) and we're hoping to push some ideas on [Souvenir](https://souvenir.cam/) in the future:
+But I'm not alone at Guérilla.Studio (my "two-women-one-cat-and-some-friends little collective" as I like to call it) and we're hoping to push some ideas on [Souvenir](https://souvenir.cam/) in the future:
 
 * Gif History: Consult and re-dl your precedents gifs
 * WebShare API: Share your souvenir more easily to contacts or to other apps on your phone
@@ -37,4 +37,4 @@ But I'm not alone at Glitch.Family (my "two-women-one-cat-and-some-friends littl
 
 For now the RSS reader project is on pause. Milia made a working prototype but I currently don't have the time to really work on the design.
 
-Soooo i guess see you next time 👋 … or on [Github](https://github.com/GlitchFamily)… or on the new [Glitch.Family Twitter account](https://twitter.com/GlitchFamilyHQ) (yeah we're on this hellsite) 👀
+Soooo i guess see you next time 👋 … or on [Github](https://github.com/GuerillaHQ)… or on the new [Guérilla.Studio Twitter account](https://twitter.com/GlitchFamilyHQ) (yeah we're still on this hellsite) 👀
