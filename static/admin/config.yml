@@ -1,5 +1,5 @@
 ---
-local_backend: true
+# local_backend: true
 backend:
   name: github
   repo: TixieBorg/tixie.name
