@@ -5,7 +5,7 @@ date: 2020-03-17T18:41:53.010Z
 ---
 While using [Hugo](https://gohugo.io/) as a static site generator, I've found a way to generate a colored placeholder with a little trick.
 
-I used it on my [music sharing website](https://music.glitch.family/) for example:
+I used it on my [music sharing website](https://music.guerilla.studio/) for example:
 
 {{< image src="colored-placeholder-music-albums.gif" alt="colored placeholder example">}}
 
