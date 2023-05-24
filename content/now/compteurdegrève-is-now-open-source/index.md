@@ -20,6 +20,7 @@ Then the JavaScript would handover and update the counter by pooling the API dir
 \
 I'm pretty happy on how quickly i was able to make a responsive version thanks to fluid typography (cf third gallery image).
 
+{{< image src="screenshot.png" alt="website screenshot">}}
 
 Some improvements could have been done:
 
@@ -30,6 +31,6 @@ We also had a possible delayed feature to generate on the go social cards (open-
 The idea was to include a dynamic message *"{number} people gonna go on strike. It's more than the population of {city}!"* to help create some engagement while the counter was increasing. \
 A prototype was made, but I never had the energy to implement it after the big crunch.
 
-Anyway, thank you again Salomé (who worked on the counter API) and Caroline De Haas (who initiated and managed the project) for this collaboration ❤️. It was a intense but great experience!
 
-{{< image src="screenshot.png" alt="website screenshot">}}
+
+Anyway, thank you again Salomé (who worked on the counter API) and Caroline De Haas (who initiated and managed the project) for this collaboration ❤️. It was a intense but great experience!
