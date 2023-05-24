@@ -21,7 +21,7 @@ Then the JavaScript would handover and update the counter by pooling the API dir
 I'm pretty happy on how quickly i was able to make a responsive version thanks to fluid typography (cf third gallery image).
 
 
-Some improvements could have been done :
+Some improvements could have been done:
 
 * Improve clarity of states changes when handled with JavaScript through ARIA semantic. 
 * A more advanced shared cookie exchange with the API would have allow to directly display the "already-clicked" message when coming back to later on the page. 
