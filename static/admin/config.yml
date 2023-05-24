@@ -4,7 +4,6 @@ backend:
   name: github
   repo: TixieBorg/tixie.name
   branch: main
-publish_mode: editorial_workflow
 site_url: https://tixie.name
 display_url: https://tixie.name/now
 media_folder: assets/upload
