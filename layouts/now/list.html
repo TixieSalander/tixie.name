@@ -58,7 +58,7 @@
             <div class="now-post__head">{{ .Date.Format "January 02, 2006" }} — <a href="{{ .Permalink }}">Permalink</a></div>
             <div class="now-post__box">
               <div class="now-post__content">
-                {{ if isset .Params "show_title" }}
+                {{ if eq .Params.show_title true }}
                     <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
                 {{ end }}
                 {{ .Content }}

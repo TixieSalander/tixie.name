@@ -40,7 +40,7 @@
 {{ define "main" }}
   <div class="container container--medium">
     <div class="content-head txtcenter">
-        {{ if isset .Params "show_title" }}
+        {{ if eq .Params.show_title true }}
         <h1 class="content-title">{{ .Title }}</h1>
         {{ else }}
         <div>A status about what I’m focused on</div>
