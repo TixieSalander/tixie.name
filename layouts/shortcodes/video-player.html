@@ -1,0 +1,30 @@
+
+{{ $video := $.Page.Resources.GetMatch (.Get "src") }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+{{ $videoSmall := $.Page.Resources.GetMatch (.Get "src-small") }}
+{{ $poster := $.Page.Resources.GetMatch (.Get "poster") }}
+{{ $loop := .Get "loop" }}
+{{ $muted := .Get "muter" }}
+{{ $autoplay := .Get "autoplay" }}
+
+<video
+  controls
+  playsinline
+  webkit-playsinline
+  allowfullscreen
+  {{ if $muted }} muted {{ end }}
+  {{ if $loop }} loop {{ end }}
+  {{ if $autoplay }} autoplay {{ end }}
+  {{ if $poster }}
+  poster="{{ $poster.RelPermalink }}"
+  {{ end }}
+  width="{{ $width }}" height="{{ $height }}"
+  style="aspect-ratio: {{ $width }} / {{ $height }}; width: 100%; height: auto;"
+>
+    {{ if $videoSmall }}
+    <source src="{{ $videoSmall.RelPermalink }}" type="video/mp4" media="(max-width: 600px)" />
+    {{ end }}
+    <source src="{{ $video.RelPermalink }}" type="video/mp4" />
+    Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="{{ $video.RelPermalink }}">download it</a> and watch it with your favorite video player!
+</video>
