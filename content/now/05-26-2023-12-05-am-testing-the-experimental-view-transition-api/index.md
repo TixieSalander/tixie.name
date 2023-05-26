@@ -15,7 +15,9 @@ But by adding only a [meta tag](https://github.com/GuerillaHQ/now-playing/commit
 
 {{< video-player
     src="now-playing-view-transition-api-demo.mp4"
+    src-webm="now-playing-view-transition-api-demo.webm"
     src-small="now-playing-view-transition-api-demo-720.mp4"
+    src-small-webm="now-playing-view-transition-api-demo-720.webm"
     poster="now-playing-view-transition-api_video-poster.png"
     width="702"
     height="540"
