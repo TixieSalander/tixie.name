@@ -23,3 +23,9 @@
   to = "/now/03-17-2020-7-41-pm-make-colored-placeholder-hugo/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/now/03-17-2020-7-41-pm-make-colored-placeholder-hugo/"
+  to = "https://guerilla.studio/blog/make-colored-placeholder-hugo/"
+  status = 301
+  force = true
