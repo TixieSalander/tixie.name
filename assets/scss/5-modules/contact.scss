@@ -39,10 +39,11 @@
 .contact__send {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   max-width: 66.7rem;
   margin: 0 auto;
   margin-top: 6rem;
+  column-gap: 2rem;
 }
 
 .contact__sendText {
