@@ -2,7 +2,7 @@
 # local_backend: true
 backend:
   name: github
-  repo: TixieBorg/tixie.name
+  repo: TixieSalander/tixie.name
   branch: main
 site_url: https://tixie.name
 display_url: https://tixie.name/now
