@@ -89,11 +89,14 @@
   -------------------------------------------------------------- */
 
   .title-section__title {
-    font-size: 6rem;
+    max-width: 95%;
+    font-size: 5rem;
+    line-height: 1em;
   }
 
   .line.title-section__line {
     width: 75%;
+    margin-top: -.5rem;
   }
 
   /* Contact section
