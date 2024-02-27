@@ -10,7 +10,7 @@ html {
 body {
   color: $color-light-text;
   font-family: $fontstack1;
-  background-color: #000;
+  background-color: $color-bg-dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

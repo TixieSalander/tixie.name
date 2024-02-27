@@ -13,13 +13,11 @@
 }
 
 .title-section__title {
-  max-height: 9rem;
   margin: 0;
-  overflow: hidden;
   font-weight: 900;
-  font-size: 10rem;
+  font-size: 7.5rem;
   font-family: $fontstack2;
-  line-height: 12rem;
+  line-height: 1.1em;
   outline-offset: 2rem;
 }
 
@@ -27,5 +25,6 @@
   position: absolute;
   left: 0;
   width: 50%;
-  margin-top: .3rem;
+  margin-top: -1.2rem;
+  box-shadow: -.3rem 0 0 .3rem $color-bg-dark;
 }
