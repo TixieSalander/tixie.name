@@ -47,5 +47,5 @@ Go to you website's local url + `/admin` (by default it's `http://localhost:1313
   * [Tobi](https://github.com/rqrauhvmra/Tobi/) - The minimal lib for lightbox
 
 ## Licence
-  * Content (blog posts for example) are under [CC BY SA](http://creativecommons.org/licenses/by-sa/4.0/), except other folks showcased work who belong to their respective owners.
-  * Code (except the libraries I'm using) is on CopyLeft, enjoy.
+  * My logo and blog posts (images included) are under [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/), except other folks showcased work who belong to their respective owners.
+  * Code (except the libraries I'm using) is under [“I'm so tired” 1.0](LICENSE) license. Please **take the time** to read and *check if you're allowed* to use it before doing so. (*Thank you luna who made it* \[[source](https://olmewe.com/notepad/istsl/)\].)
