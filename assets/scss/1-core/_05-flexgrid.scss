@@ -16,33 +16,25 @@
 
 
 // equal grid
-@mixin grid($number:$number, $gutter:$default-gutter, $mb:$gutter) {
+@mixin grid($number:$number, $gutter:$default-gutter, $gutter-vertical:$gutter) {
+
+  & {
+    row-gap: $gutter-vertical;
+  }
 
   // equal grid no gutter
   @if $gutter == 0 {
 
-    & {
-      margin-bottom: -$mb;
-    }
-
     & > *:nth-child(n) {
       width: calc(100% * 1 / #{$number} - .01px);
-      margin-bottom: $mb;
     }
   }
 
   // one column mode
   @if $number == 1 {
 
-    & {
-      margin-bottom: -$mb;
-      margin-left: 0;
-    }
-
     & > *:nth-child(n) {
       width: 100%;
-      margin-bottom: $mb;
-      margin-left: 0;
     }
   }
 
@@ -50,20 +42,21 @@
   @if $number>1 and $gutter>0 {
 
     & {
-      margin-bottom: -$mb; /* avoid unwanted margin on last line */
-      margin-left: -$gutter;
+      column-gap: $gutter;
     }
 
     & > *:nth-child(n) {
       width: calc(100% * 1 / #{$number} - #{$gutter} - .01px); // .01px = $bugfix IE
-      margin-bottom: $mb;
-      margin-left: $gutter;
     }
   }
 }
 
 // unequal grid
-@mixin unequalGrid($column1, $column2, $gutter:$default-gutter, $mb:$gutter) {
+@mixin unequalGrid($column1, $column2, $gutter:$default-gutter, $gutter-vertical:$gutter) {
+
+  & {
+    row-gap: $gutter-vertical;
+  }
 
   // no gutter (when gutter = 0)
   @if $gutter == 0 {
@@ -83,8 +76,8 @@
   @else {
     $g : $gutter / 2;
 
-    &> * {
-      margin-bottom: $mb;
+    & {
+      column-gap: $gutter;
     }
 
     & > *:nth-child(odd) {
@@ -96,9 +89,6 @@
     & > *:nth-child(even) {
       $size : ($column2 * 100%) / ($column1 + $column2);
       width: calc(#{$size} - #{$g} - .01px); // .01px = $bugfix IE
-
-      margin-left: $gutter;
-
     }
   }
 }
@@ -121,6 +111,7 @@
 /* helpers
 -------------------------------------------------------------- */
 
-[class*='grid-'].grid-noMargin > * {
-  margin-bottom: 0;
+[class*='grid-'].grid-noMargin {
+  column-gap: 0;
+  row-gap: 0;
 }

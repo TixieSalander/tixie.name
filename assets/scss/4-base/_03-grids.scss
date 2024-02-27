@@ -2,15 +2,15 @@
 /* == grids */
 /* ----------------------------------------------------------- */
 
-$grid-gutter: 0rem;
-$grid-mb: 6rem;
+$grid-gutter: 2rem;
+$grid-gutter-vertical: 6rem;
 
 .grid-1 {
-  @include grid(1, $grid-gutter, $grid-mb);
+  @include grid(1, $grid-gutter, $grid-gutter-vertical);
 }
 
 .grid-2 {
-  @include grid(2, $grid-gutter, $grid-mb);
+  @include grid(2, $grid-gutter, $grid-gutter-vertical);
 }
 
 .grid-3 {
@@ -36,7 +36,7 @@ $grid-mb: 6rem;
 @media (max-width: $xsmall) {
 
   .grid-1-xs {
-    @include grid(1, $grid-gutter, $grid-mb);
+    @include grid(1, $grid-gutter, $grid-gutter-vertical);
   }
 
   .grid-2-xs {
