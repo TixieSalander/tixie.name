@@ -1,6 +1,6 @@
 {{ define "metaTitle" }}
 <title>{{ .Title }} ∴ Now Page</title>
-<meta name="description" content="A status about what I’m focused on">
+<meta name="description" content="A status about what I’m busy on lately">
   {{ with .Site.GetPage "/now" }}
     {{ with .OutputFormats.Get "rss" }}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -12,7 +12,7 @@
   <!-- Open Graph -->
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:title" content="{{ .Title }} - Now Status">
-  <meta property="og:description" content="A status about what I’m focused on">
+  <meta property="og:description" content="A status about what I’m busy on lately">
   <meta property="og:image" content="{{ "/img/favicons/android-chrome-512x512.png" | absURL }}">
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
@@ -38,7 +38,7 @@
         {{ if eq .Params.show_title true }}
         <h1 class="content-title">{{ .Title }}</h1>
         {{ else }}
-        <div>A status about what I’m focused on</div>
+        <div>A status about what I’m busy on lately</div>
         <h1 class="visually-hidden">{{ .Title }}</h1>
         {{ end }}
     </div>
@@ -81,7 +81,7 @@
         <div class="txtcenter">
           <a class="btn btn--primary" href="/now">
             <img class="vmiddle" src="/img/ico-arrow-left.svg" alt="">
-            <span class="vmiddle">Back to Now Page</span>
+            <span class="vmiddle">Back to status list</span>
           </a>
         </div>
       </div>

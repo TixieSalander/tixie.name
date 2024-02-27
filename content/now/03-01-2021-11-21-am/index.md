@@ -37,4 +37,4 @@ But I'm not alone at Guérilla.Studio (my "two-women-one-cat-and-some-friends li
 
 For now the RSS reader project is on pause. Milia made a working prototype but I currently don't have the time to really work on the design.
 
-Soooo i guess see you next time 👋 … or on [Github](https://github.com/GuerillaHQ)… or on the new [Guérilla.Studio Twitter account](https://twitter.com/GlitchFamilyHQ) (yeah we're still on this hellsite) 👀
+Soooo i guess see you next time 👋 … or on [Github](https://github.com/GuerillaHQ)… or on the new [Guérilla.Studio Twitter account](https://twitter.com/GuerillaHQ) (yeah we're still on this hellsite) 👀
