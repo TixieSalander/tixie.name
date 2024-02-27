@@ -7,9 +7,14 @@
     {{ else }}
       <span class="pagination-btn disabled">{{ partial "svg/pagination-left" . }}</span>
     {{ end }}
-    <div class="pagination-current">
-      {{ $paginator.PageNumber }}
-    </div>
+    {{range $paginator.Pagers }}
+        {{ $currentPagination := . }}
+        {{ if (eq $paginator.PageNumber $currentPagination.PageNumber) }}
+          <div class="pagination-current">{{ $currentPagination.PageNumber }}</div>
+        {{ else }}
+          <a class="pagination-btn" href="{{ $currentPagination.URL }}">{{ $currentPagination.PageNumber }}</a>
+        {{ end }}
+    {{ end }}
     {{ if $paginator.HasNext }}
       <a class="pagination-btn pagination-btn--right" href="{{ $paginator.Next.URL }}">{{ partial "svg/pagination-right" . }}</a>
     {{ else }}
