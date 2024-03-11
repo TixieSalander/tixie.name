@@ -1,7 +1,7 @@
 baseURL = "http://tixie.name"
 languageCode = "en"
 title = "Tixie homepage 🏠"
-disableKinds = [ "taxonomy", "taxonomyTerm", "sitemap" ]
+disableKinds = [ "taxonomy", "sitemap" ]
 summaryLength = 40
 paginate = 10
 
