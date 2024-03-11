@@ -1,4 +1,4 @@
-NetlifyCmsApp.registerEditorComponent({
+CMS.registerEditorComponent({
   // Internal id of the component
   id: "image",
   // Visible label
