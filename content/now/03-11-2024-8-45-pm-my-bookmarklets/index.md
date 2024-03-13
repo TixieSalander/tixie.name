@@ -5,7 +5,7 @@ date: 2024-03-11T19:45:50.071Z
 ---
 I've decided to gather the few bookmarklets I use regularly in one place, to be easily findable and sharable. So if you're interested everything is over there: 
 
-→ **[https://github.com/TixieSalander/awesome-bookmarklets](**https://github.com/TixieSalander/awesome-bookmarklets)**
+→ **[https://github.com/TixieSalander/awesome-bookmarklets](https://github.com/TixieSalander/awesome-bookmarklets)**
 
 
 
