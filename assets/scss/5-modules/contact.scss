@@ -60,18 +60,29 @@
   align-items: center;
   padding: 2rem;
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: auto;
   border: .1rem solid transparent;
-  transition: border .2s;
+  transform-origin: 50% 50%;
+  transition: .15s all;
 }
 
-.contact__sendItem:hover,
-.contact__sendItem:active {
-  border: .1rem dotted $color-light-text;
+.contact__sendItem:is(:hover,:active) {
+  text-underline-offset: .15em;
+  text-decoration-color: $color-primary;
 }
 
 img.contactSendIcon {
   width: auto;
-  height: 2.2rem;
+  height: 4rem;
   margin-bottom: 1.5rem;
+  transform-origin: 50% 50%;
+  filter: drop-shadow(.1rem .1rem 0 rgba($color-primary, .7));
+  transition: .15s all;
+}
+
+.contact__sendItem:is(:hover, :active) .contactSendIcon {
+  translate: -.1rem -.1rem;
+  filter: drop-shadow(.2rem .2rem 0 rgba($color-primary, 1));
 }

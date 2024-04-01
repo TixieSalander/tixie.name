@@ -72,13 +72,12 @@
 
 .now-post__head a {
   color: #c7c7c7;
-  text-decoration: none;
 }
 
-.now-post__head a:hover,
-.now-post__head a:active,
-.now-post__head a:focus {
+.now-post__head a:is(:hover,:active,:focus) {
   text-decoration: underline;
+  text-decoration-color: $color-primary;
+
 }
 
 .now-post__box {
@@ -92,6 +91,10 @@
 .now-post__content {
   font-size: 1.4rem;
   line-height: 1.7em;
+}
+
+.now-post__content a:is(:hover,:active,:focus) {
+  text-decoration-color: $color-primary;
 }
 
 .now-post__content p {

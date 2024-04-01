@@ -22,3 +22,7 @@
 img.footer__icon {
   width: 2rem;
 }
+
+.footer a:is(:hover,:active,:focus) {
+  text-decoration-color: $color-primary;
+}

@@ -44,10 +44,14 @@
   font-weight: bold;
   font-size: 2.4rem;
   line-height: 1.3;
+  text-decoration: underline;
 }
 
 .folio__item:hover .folio__itemName {
-  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: .1rem;
+  text-decoration-color: $color-primary;
+  text-underline-offset: .15em;
 }
 
 .folio__itemJob {

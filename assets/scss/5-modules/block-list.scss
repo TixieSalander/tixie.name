@@ -13,19 +13,19 @@
   margin: 0;
   font-weight: bold;
   font-size: 2.4rem;
+  text-decoration: underline;
 }
 
 .blockList__item:hover .blockList__itemTitle {
   text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-thickness: .1rem;
+  text-underline-offset: .15em;
+  text-decoration-color: $color-primary;
 }
 
 .blockList__itemAbout {
   margin: 0;
   color: #d0d0d0;
   transition: all .2s;
-}
-
-.blockList__item:hover .blockList__itemAbout {
-  font-style: italic;
-  transform: translateX(.5rem);
 }
