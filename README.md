@@ -23,7 +23,7 @@ hugo --baseURL $URL
 As it `$URL` is an env variable but you can harcode it in the build command.
 
 
-## Use NetlifyCMS in local mode
+## Use DecapCMS in local mode
 
 This website use [Decap](https://decapcms.org/) backoffice to manage albums easily.
 And it's possible to use it while working in local:
