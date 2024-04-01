@@ -29,7 +29,7 @@ $grid-gutter-vertical: 6rem;
   @include unequalGrid(1, 3, $grid-gutter);
 }
 
-.grid-now-gallery {
+.grid-changelog-gallery {
   @include grid(4, 3.4rem);
 }
 
@@ -43,7 +43,7 @@ $grid-gutter-vertical: 6rem;
     @include grid(2);
   }
 
-  .grid-now-gallery {
+  .grid-changelog-gallery {
     @include grid(4, .5rem);
   }
 }

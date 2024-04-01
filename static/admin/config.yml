@@ -1,24 +1,24 @@
 ---
-# local_backend: true
+local_backend: true
 backend:
   name: github
   repo: TixieSalander/tixie.name
   branch: main
 site_url: https://tixie.name
-display_url: https://tixie.name/now
+display_url: https://tixie.name/logs
 media_folder: assets/upload
 public_folder: /upload
 collections:
-  - name: now
+  - name: Logs
     editor:
       preview: false
     create: true
-    label: Now Status
+    label: Log Status
     format: frontmatter
-    folder: content/now
+    folder: content/logs
     path: '{{slug}}/index'
     sortable_fields: ['date']
-    preview_path: now/{{slug}}
+    preview_path: logs/{{slug}}
     media_folder: ''
     public_folder: ''
     fields:

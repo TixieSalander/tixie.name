@@ -22,6 +22,12 @@
     <meta name="msapplication-config" content="{{ "/browserconfig.xml" | absURL }}">
     <meta name="theme-color" content="#ffffff">
 
+    {{ with .Site.GetPage "/logs" }}
+      {{ with .OutputFormats.Get "rss" }}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="Tixie's personal micro-blog" />` .Rel .MediaType.Type .Permalink | safeHTML }}
+      {{ end }}
+    {{ end }}
+
     {{ block "metaSocial" . }}
       <!-- Open Graph -->
       <meta property="og:url" content="/">

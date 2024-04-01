@@ -38,10 +38,10 @@ url = "/#links"
 weight = 3
 
 [[menu.nav]]
-identifier = "now"
-name = "Now"
+identifier = "logs"
+name = "Logs"
 title = "Micro-blog"
-url = "/now/"
+url = "/logs/"
 weight = 4
 
 [[menu.nav]]

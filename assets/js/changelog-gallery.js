@@ -1,6 +1,6 @@
-class NowGallery {
+class ChangelogGallery {
   constructor() {
-    this.items = '[data-now-gallery]'
+    this.items = '[data-changelog-gallery]'
     this.gallery = null
   }
 
@@ -12,4 +12,4 @@ class NowGallery {
   }
 }
 
-new NowGallery().init()
+new ChangelogGallery().init()

@@ -1,15 +1,12 @@
 {{ define "metaTitle" }}
-<title>Now Page</title>
+<title>Logs.Now</title>
 <meta name="description" content="A micro-blog about what I’m busy on lately">
-{{ with .OutputFormats.Get "RSS" }}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end }}
 {{ end }}
 
 {{ define "metaSocial" }}
   <!-- Open Graph -->
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:title" content="Now Page">
+  <meta property="og:title" content="Logs.Now">
   <meta property="og:description" content="A micro-blog about what I’m busy on lately">
   <meta property="og:image" content="{{ "/img/favicons/android-chrome-512x512.png" | absURL }}">
   <meta property="og:image:width" content="512">
@@ -24,16 +21,16 @@
 
 {{ define "scripts" }}
   {{ $tobyJS := resources.Get "/js/tobi.min.js" }}
-  {{ $nowGallery := resources.Get "js/now-gallery.js" }}
-  {{ $nowGalleryConcat := slice $tobyJS $nowGallery | resources.Concat "js/now-gallery-bundle.js" }}
-  {{ $nowGallerySecure := $nowGalleryConcat | resources.Fingerprint "sha512" }}
-  <script src="{{ $nowGalleryConcat.Permalink }}" integrity="{{ $nowGallerySecure.Data.Integrity }}"></script>
+  {{ $changelogGallery := resources.Get "js/changelog-gallery.js" }}
+  {{ $changelogGalleryConcat := slice $tobyJS $changelogGallery | resources.Concat "js/changelog-gallery-bundle.js" }}
+  {{ $changelogGallerySecure := $changelogGalleryConcat | resources.Fingerprint "sha512" }}
+  <script src="{{ $changelogGalleryConcat.Permalink }}" integrity="{{ $changelogGallerySecure.Data.Integrity }}"></script>
 {{ end }}
 
 {{ define "main" }}
   <div class="container">
     <div class="content-head txtcenter">
-      <h1 class="content-title">What Am I Doing <span class="color-primary">Now</span>?</h1>
+      <h1 class="content-title">Logs.<span class="color-primary">Now</span></h1>
       <p>A micro-blog about what I’m busy on lately</p>
       {{ with .OutputFormats.Get "RSS" }}
       <div>
@@ -45,31 +42,31 @@
       {{ end }}
     </div>
 
-    <div class="now">
+    <div class="changelog">
       <div class="container container--medium">
-        {{range $index, $element := (.Paginate ( where .Data.Pages "Type" "now")).Pages}}
+        {{range $index, $element := (.Paginate ( where .Data.Pages "Type" "logs")).Pages}}
         {{ $page := . }}
-          <div class="now-post">
-            <div class="now-post__head">{{ .Date.Format "January 02, 2006" }} — <a href="{{ .Permalink }}">Permalink</a></div>
-            <div class="now-post__box">
-              <div class="now-post__content">
+          <div class="changelog-post">
+            <div class="changelog-post__head">{{ .Date.Format "January 02, 2006" }} — <a href="{{ .Permalink }}">Permalink</a></div>
+            <div class="changelog-post__box">
+              <div class="changelog-post__content">
                 {{ if eq .Params.show_title true }}
                     <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
                 {{ end }}
                 {{ .Content }}
               </div>
               {{ if (isset .Params "images" ) }}
-                <div class="now-post__gallery">
-                  <div class="grid grid-now-gallery">
+                <div class="changelog-post__gallery">
+                  <div class="grid grid-changelog-gallery">
                   <!-- gallery items -->
                   {{ range .Params.images }}
                     {{ $original := $page.Resources.GetMatch . }}
                     {{ $originalPermalink := $original.Permalink }}
                     {{ $thumb := $original.Fill "117x117 center" }}
                     {{ $thumb2x := $original.Fill "234x234 center" }}
-                    <a class="now-post__galleryItem" href="{{ $original.Permalink }}" data-now-gallery data-group="gallery-{{ $index }}">
+                    <a class="changelog-post__galleryItem" href="{{ $original.Permalink }}" data-changelog-gallery data-group="gallery-{{ $index }}">
                       <img
-                      class="now-post__galleryImg"
+                      class="changelog-post__galleryImg"
                       width="142"
                       height="142"
                       src="{{ $thumb.Permalink }}"
@@ -86,7 +83,7 @@
           </div>
         {{ end }}
 
-        <div class="now-pagination">
+        <div class="changelog-pagination">
           {{ partial "pagination" . }}
         </div>
       </div>

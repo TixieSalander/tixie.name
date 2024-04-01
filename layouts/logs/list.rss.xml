@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Now Page</title>
+    <title>Logs.Now</title>
     <link>{{ .Permalink }}</link>
     <description>A micro-blog about what I’m busy on lately</description>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
@@ -9,7 +9,7 @@
     {{ with .OutputFormats.Get "RSS" }}
       {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
-    {{ $status := (where .Data.Pages "Type" "now") }}
+    {{ $status := (where .Data.Pages "Type" "logs") }}
     {{ range sort $status "Date" "desc" }}
     <item>
       <title>{{ .Title }}</title>

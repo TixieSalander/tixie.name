@@ -1,3 +1,3 @@
 
 {{ $image := $.Page.Resources.GetMatch (.Get "src") }}
-  <p><a href="{{ $image.RelPermalink }}" data-now-gallery data-group="{{ $.Page.Params.date }}"><img src="{{ $image.RelPermalink }}" alt="{{ cond (eq (.Get "alt") "undefined") "" (.Get "alt") }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy"></a></p>
+  <p><a href="{{ $image.RelPermalink }}" data-changelog-gallery data-group="{{ $.Page.Params.date }}"><img src="{{ $image.RelPermalink }}" alt="{{ cond (eq (.Get "alt") "undefined") "" (.Get "alt") }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy"></a></p>

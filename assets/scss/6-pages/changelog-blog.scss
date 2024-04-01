@@ -2,20 +2,20 @@
 /* == Now page */
 /* ----------------------------------------------------------- */
 
-.now {
+.changelog {
   margin-bottom: 11rem;
 }
 
 /* Post
 -------------------------------------------------------------- */
 
-.now-post {
+.changelog-post {
   position: relative;
 }
 
 @supports (clip-path: fill-box) {
 
-  .now-post::before {
+  .changelog-post::before {
     position: absolute;
     top: 2.8rem;
     left: .2rem;
@@ -30,7 +30,7 @@
   }
 }
 
-.now-post__head {
+.changelog-post__head {
   position: relative;
   height: 30px;
   padding-left: 2.5rem;
@@ -45,18 +45,18 @@
 
 @supports (clip-path: fill-box) {
 
-  .now-post__head {
+  .changelog-post__head {
     padding-left: 5rem;
   }
 }
 
-.now-post__head::before {
+.changelog-post__head::before {
   position: absolute;
   top: 0;
   left: 0;
   width: 1.5rem;
   height: 3rem;
-  background: url('/img/now-postline.svg') no-repeat;
+  background: url('/img/changelog-postline.svg') no-repeat;
   background-position: top right;
   background-size: 3.2rem 3rem;
   content: '';
@@ -64,23 +64,23 @@
 
 @supports (clip-path: fill-box) {
 
-  .now-post__head::before {
+  .changelog-post__head::before {
     left: 1rem;
     width: 3.2rem;
   }
 }
 
-.now-post__head a {
+.changelog-post__head a {
   color: #c7c7c7;
 }
 
-.now-post__head a:is(:hover,:active,:focus) {
+.changelog-post__head a:is(:hover,:active,:focus) {
   text-decoration: underline;
   text-decoration-color: $color-primary;
 
 }
 
-.now-post__box {
+.changelog-post__box {
   margin-bottom: 5rem;
   padding: 4rem 5rem 5rem;
   color: #c2c3c6;
@@ -88,48 +88,48 @@
   clip-path: polygon(2.4rem 0, 100% 0, 100% 100%, 0 100%, 0 2.4rem);
 }
 
-.now-post__content {
+.changelog-post__content {
   font-size: 1.4rem;
   line-height: 1.7em;
 }
 
-.now-post__content a:is(:hover,:active,:focus) {
+.changelog-post__content a:is(:hover,:active,:focus) {
   text-decoration-color: $color-primary;
 }
 
-.now-post__content p {
+.changelog-post__content p {
   margin-bottom: 1.9em;
 }
 
-.now-post__content h2 {
+.changelog-post__content h2 {
   @include flow(20);
 }
 
-.now-post__content p:last-child {
+.changelog-post__content p:last-child {
   margin-bottom: 0;
 }
 
-.now-post__content img:not([src$='.png']) {
+.changelog-post__content img:not([src$='.png']) {
   background-color: rgba(#fff, .3);
 }
 
-.now-post__content li {
+.changelog-post__content li {
   list-style-type: '• ';
 }
 
-.now-post__content code {
+.changelog-post__content code {
   padding: .3rem .5rem;
   font-size: 85%;
   background-color: rgba(239, 240, 244, .15);
   border-radius: .3rem;
 }
 
-.now-post__content pre {
+.changelog-post__content pre {
   padding: 1rem;
   overflow-x: auto;
 }
 
-.now-post__content pre code {
+.changelog-post__content pre code {
   padding: 0;
   font-size: inherit;
   background: none;
@@ -139,17 +139,17 @@
 /* Gallery
 -------------------------------------------------------------- */
 
-.now-post__gallery {
+.changelog-post__gallery {
   margin-top: 3rem;
 }
 
-.now-post__galleryItem:link,
-.now-post__galleryItem:visited {
+.changelog-post__galleryItem:link,
+.changelog-post__galleryItem:visited {
   position: relative;
 }
 
-.now-post__galleryItem::before,
-.now-post__galleryItem::after {
+.changelog-post__galleryItem::before,
+.changelog-post__galleryItem::after {
   position: absolute;
   width: 1rem;
   height: 1rem;
@@ -157,33 +157,33 @@
   content: '';
 }
 
-.now-post__galleryItem::before {
+.changelog-post__galleryItem::before {
   bottom: 0;
   left: 0;
   border-bottom: .1rem solid $color-primary;
   border-left: .1rem solid $color-primary;
 }
 
-.now-post__galleryItem:hover::before,
-.now-post__galleryItem:active::before,
-.now-post__galleryItem:focus::before {
+.changelog-post__galleryItem:hover::before,
+.changelog-post__galleryItem:active::before,
+.changelog-post__galleryItem:focus::before {
   transform: translate(-.2rem, .2rem);
 }
 
-.now-post__galleryItem::after {
+.changelog-post__galleryItem::after {
   top: 0;
   right: 0;
   border-top: .1rem solid $color-primary;
   border-right: .1rem solid $color-primary;
 }
 
-.now-post__galleryItem:hover::after,
-.now-post__galleryItem:active::after,
-.now-post__galleryItem:focus::after {
+.changelog-post__galleryItem:hover::after,
+.changelog-post__galleryItem:active::after,
+.changelog-post__galleryItem:focus::after {
   transform: translate(.2rem, -.2rem);
 }
 
-.now-post__galleryImg {
+.changelog-post__galleryImg {
   width: 100%;
   height: 100%;
   font-size: 1rem;
@@ -192,6 +192,6 @@
 /* Pagination
 -------------------------------------------------------------- */
 
-.now-pagination {
+.changelog-pagination {
   text-align: center;
 }
