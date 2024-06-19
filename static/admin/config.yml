@@ -32,6 +32,7 @@ collections:
     - name: date
       label: Date
       widget: datetime
+      picker_utc: true
     - name: body
       label: Content
       widget: markdown
