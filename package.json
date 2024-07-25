@@ -1,7 +1,7 @@
 {
   "name": "tixie.name",
   "version": "1.0.0",
-  "description": "Tixie homepage",
+  "description": "Tixie Salander's homepage",
   "license": "SEE LICENSE IN ./LICENSE",
   "devDependencies": {
     "autoprefixer": "^9.7.4",

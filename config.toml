@@ -1,6 +1,6 @@
 baseURL = "http://tixie.name"
 languageCode = "en"
-title = "Tixie homepage 🏠"
+title = "Tixie Salander's homepage 🏠"
 disableKinds = [ "taxonomy", "sitemap" ]
 summaryLength = 40
 paginate = 10

@@ -17,15 +17,15 @@
     <link rel="icon alternate" type="image/png" sizes="16x16" href="{{ "/img/favicons/favicon-16x16.png" | absURL }}">
     <link rel="manifest" href="{{ "/manifest.webmanifest" | absURL }}">
     <link rel="mask-icon" href="{{ "/img/favicons/safari-pinned-tab.svg" | absURL }}" color="#ef40db">
-    <meta name="apple-mobile-web-app-title" content="Tixie">
-    <meta name="application-name" content="Tixie">
+    <meta name="apple-mobile-web-app-title" content="Tixie Salander">
+    <meta name="application-name" content="Tixie Salander">
     <meta name="msapplication-config" content="{{ "/browserconfig.xml" | absURL }}">
     <meta name="theme-color" content="#ffffff">
     <meta name="fediverse:creator" content="@tixie@guerilla.studio "/>
 
     {{ with .Site.GetPage "/logs" }}
       {{ with .OutputFormats.Get "rss" }}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="Tixie's personal micro-blog" />` .Rel .MediaType.Type .Permalink | safeHTML }}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="Tixie Salander's personal micro-blog" />` .Rel .MediaType.Type .Permalink | safeHTML }}
       {{ end }}
     {{ end }}
 
