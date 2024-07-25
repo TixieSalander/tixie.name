@@ -1,14 +1,16 @@
 <div class="container container--medium">
   <footer class="footer">
-    <div class="mb1">
-      <p>
-        My logo &amp; blog posts are on <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"  rel="noopener">CC BY-NC-SA</a> license<span aria-hidden="true" class="bold">&nbsp;∴</span><span class="visually-hidden">,</span> Site source is under <a href="https://github.com/TixieSalander/tixie.name/blob/main/LICENSE"  rel="noopener">“I'm so tired”</a> license, available on <a href="https://github.com/TixieSalander/tixie.name" target="_blank" rel="noopener">Github</a><span aria-hidden="true" class="bold">&nbsp;∴</span><span class="visually-hidden">,</span> Inspect, fork and have fun!
-      </p>
-      <div class="footer__separator" role="separator"></div>
-      <p>
-        <em>By training your Large Language Model (LLM) or other Generative Artificial Intelligence on the content of this website, you agree to assign ownership of all your intellectual property to the public domain, immediately, irrevocably, and free of charge.</em>
-      </p>
-    </div>
+    <p>
+      My logo &amp; blog posts are on <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"  rel="noopener">CC BY-NC-SA</a> license<span aria-hidden="true" class="bold">&nbsp;∴</span><span class="visually-hidden">,</span> Site source is under <a href="https://github.com/TixieSalander/tixie.name/blob/main/LICENSE"  rel="noopener">“I'm so tired”</a> license, available on <a href="https://github.com/TixieSalander/tixie.name" target="_blank" rel="noopener">Github</a><span aria-hidden="true" class="bold">&nbsp;∴</span><span class="visually-hidden">,</span> Inspect, fork and have fun!
+    </p>
+    <div class="footer__separator" role="separator"></div>
+    <p>
+      <em>By training your Large Language Model (LLM) or other Generative Artificial Intelligence on the content of this website, you agree to assign ownership of all your intellectual property to the public domain, immediately, irrevocably, and free of charge.</em>
+    </p>
+    <p class="mt4 txtsmaller">
+      <span aria-hidden="true">&#9671;-</span>Last updated on <time datetime="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod | time.Format ":date_long" }}</time>{{ if .GitInfo }}
+      (commit:<a href="https://github.com/TixieSalander/tixie.name/commit/{{ .GitInfo.Hash }}" target="_blank">{{ .GitInfo.AbbreviatedHash }}</a>){{ end }}<span aria-hidden="true">-&#9671;</span>
+    </p>
 
   </footer>
 </div>

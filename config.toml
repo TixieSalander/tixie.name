@@ -4,6 +4,7 @@ title = "Tixie Salander's homepage 🏠"
 disableKinds = [ "taxonomy", "sitemap" ]
 summaryLength = 40
 paginate = 10
+enableGitInfo = true
 
 [markup.goldmark.renderer]
 unsafe = true
