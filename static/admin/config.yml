@@ -1,11 +1,12 @@
 ---
-local_backend: true
+#local_backend: true
 backend:
   name: github
   repo: TixieSalander/tixie.name
   branch: main
 site_url: https://tixie.name
 display_url: https://tixie.name/logs
+logo_url: https://tixie.name/img/favicons/safari-pinned-tab.svg
 media_folder: assets/upload
 public_folder: /upload
 collections:

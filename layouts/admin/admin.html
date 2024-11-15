@@ -6,7 +6,7 @@
     <title>Admin</title>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {{ $decapAdmin := resources.Get "/js/admin-decap.js" }}
     <script src="{{ $decapAdmin.Permalink }}"></script>
