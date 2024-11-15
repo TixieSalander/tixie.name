@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     {{ block "metaTitle" . }}
       <title>{{ .Title }}</title>
       <meta name="description" content="CSS Architect • Designer • Pun(k)s">
     {{ end }}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    {{ if eq .Params.show_title true }}
+    <meta name="robots" content="noindex">
+    {{ end}}
+
     <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/img/favicons/apple-touch-icon.png" | absURL }}">

@@ -1,5 +1,5 @@
 ---
-#local_backend: true
+local_backend: true
 backend:
   name: github
   repo: TixieSalander/tixie.name
@@ -28,6 +28,10 @@ collections:
       widget: string
     - name: show_title
       label: Show Title
+      widget: boolean
+      default: false
+    - name: meta_noindex
+      label: Noindex
       widget: boolean
       default: false
     - name: date
