@@ -2,7 +2,7 @@
   publish = "public"
   command = "hugo --gc -b $URL"
 [build.environment]
-  HUGO_VERSION = "0.139.5"
+  HUGO_VERSION = "0.139.4"
   DART_SASS_VERSION = "1.83.0"
 
 [context.production.environment]
