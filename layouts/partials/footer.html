@@ -8,7 +8,7 @@
       <em>By training your Large Language Model (LLM) or other Generative Artificial Intelligence on the content of this website, you agree to assign ownership of all your intellectual property to the public domain, immediately, irrevocably, and free of charge.</em>
     </p>
     <p class="mt4 txtsmaller">
-      <span aria-hidden="true">&#9671;-</span>Last updated on <time datetime="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod | time.Format ":date_long" }}</time>{{ if .GitInfo }}
+      <span aria-hidden="true">&#9671;-</span>Last updated on {{ if .IsHome }}<time datetime="{{ .Site.Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Site.Lastmod | time.Format ":date_long" }}</time>{{ else }}<time datetime="{{ .Lastmod | time.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod | time.Format ":date_long" }}</time>{{ end }}{{ if .GitInfo }}
       (commit:<a href="https://github.com/TixieSalander/tixie.name/commit/{{ .GitInfo.Hash }}" target="_blank">{{ .GitInfo.AbbreviatedHash }}</a>){{ end }}<span aria-hidden="true">-&#9671;</span>
     </p>
 
