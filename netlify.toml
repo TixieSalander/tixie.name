@@ -20,7 +20,7 @@
 
 [[redirects]]
   from = "/now/03-17-2020-7-41-pm/"
-  to = "/logs/03-17-2020-7-41-pm-make-colored-placeholder-hugo/"
+  to = "https://guerilla.studio/blog/make-colored-placeholder-hugo/"
   status = 301
   force = true
 
@@ -31,13 +31,13 @@
   force = true
 
 [[redirects]]
-  from = "/now/*"
-  to = "/logs/:splat"
+  from = "/now/"
+  to = "/logs/"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/now/"
-  to = "/logs/"
+  from = "/now/*"
+  to = "/logs/:splat"
   status = 301
   force = true
