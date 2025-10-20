@@ -1,0 +1,31 @@
+---
+when:
+  event: [tag, push, deployment, cron, manual]
+  branch: [main]
+steps:
+  - name: build hugo
+    image: alpine:edge
+    environment:
+      UMAMI_DOMAIN:
+        from_secret: umami_domain
+      UMAMI_ID:
+        from_secret: umami_id
+    commands:
+      - export UMAMI_DOMAIN=$UMAMI_DOMAIN
+      - export UMAMI_ID=$UMAMI_ID
+      - echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+      - apk update
+      - apk add dart-sass nodejs npm hugo git
+      - apk upgrade
+      - npm install
+      - hugo -b 'https://tixie.name'
+
+  - name: upload
+    image: node:lts-alpine
+    environment:
+      AWS_ACCESS_KEY_ID:
+        from_secret: aws_access_key_id
+      AWS_SECRET_ACCESS_KEY:
+        from_secret: aws_secret_access_key
+    commands:
+      - npx --yes dxfl deploy tixie.name public/ --yes

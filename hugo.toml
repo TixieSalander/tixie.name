@@ -12,7 +12,7 @@ unsafe = true
 
 [security]
     [security.funcs]
-    getenv = [ "^HUGO_", "CONTEXT", "URL" ]
+    getenv = [ "^HUGO_", "CONTEXT", "URL", "BASE_URL", "UMAMI_DOMAIN", "UMAMI_ID"]
 
 # ----------------
 # Navigation links

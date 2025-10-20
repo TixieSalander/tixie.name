@@ -45,6 +45,11 @@
       <meta property="og:image:height" content="512">
     {{ end }}
 
+    {{ if (and (getenv "UMAMI_DOMAIN") (getenv "UMAMI_ID")) }}
+    <script defer src="https://{{ getenv "UMAMI_DOMAIN" }}/script.js" data-website-id="{{ getenv "UMAMI_ID" }}"></script>
+    {{ end }}
+
+
     {{ block "styles" . }}{{ end }}
 
     {{ $scss := resources.Get "/scss/style.scss" }}
