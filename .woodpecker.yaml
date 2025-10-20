@@ -10,6 +10,8 @@ steps:
         from_secret: umami_domain
       UMAMI_ID:
         from_secret: umami_id
+      CONTEXT:
+        from_secret: CONTEXT
     commands:
       - export UMAMI_DOMAIN=$UMAMI_DOMAIN
       - export UMAMI_ID=$UMAMI_ID
