@@ -1,0 +1,38 @@
+{{ define "metaTitle" }}
+<title>404 Page Not found</title>
+<meta name="description" content="Page not found">
+{{ end }}
+
+{{ define "metaSocial" }}
+  <!-- Open Graph -->
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="404 Page Not found">
+  <meta property="og:description" content="Page not found">
+  <meta property="og:image" content="{{ "/img/favicons/android-chrome-512x512.png" | absURL }}">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+{{ end }}
+
+
+{{ define "main" }}
+  <div class="container container--medium">
+    <div class="content-head txtcenter">
+        <h1 class="content-title">The page could not be found</h1>
+    </div>
+
+      <section class="container container--medium">
+        <p>Well, stuff can go wrong sometimes and maybe you mistyped a URL, tapped/clicked on a broken link or your computer just wants to drive you nuts.</p>
+        <p>Anyway … keep calm, you may find what you’re looking for on the:</p>
+        <ul>
+          <li><a href="/">Homepage</a></li>
+          <li><a href="/logs">List of may blog posts</a></li>
+        </ul>
+        <p>Or you can contact me for more specific help:</p>
+      </section>
+
+      {{ partial "contact.html" }}
+
+    </div>
+
+  </div>
+{{ end }}

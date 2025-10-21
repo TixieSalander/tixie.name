@@ -17,3 +17,9 @@ from = "/logs/03-17-2020-7-41-pm-make-colored-placeholder-hugo*"
 to = "https://guerilla.studio/blog/make-colored-placeholder-hugo*"
 status = 301
 force=true
+
+[[redirects]]
+from = "/logs/06-19-2024-8-05-pm-don't-gatekeep-git*"
+to = "/logs/06-19-2024-8-05-pm-dont-gatekeep-git*"
+status = 301
+force=true
