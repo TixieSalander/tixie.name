@@ -11,8 +11,10 @@ enableGitInfo = true
 unsafe = true
 
 [security]
-    [security.funcs]
-    getenv = [ "^HUGO_", "CONTEXT", "URL", "BASE_URL", "UMAMI_DOMAIN", "UMAMI_ID"]
+  [security.funcs]
+  getenv = [ "^HUGO_", "CONTEXT", "URL", "BASE_URL", "UMAMI_DOMAIN", "UMAMI_ID"]
+  [security.node.permissions]
+  disable = true
 
 # ----------------
 # Navigation links
