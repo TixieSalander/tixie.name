@@ -1,4 +1,3 @@
----
 when:
   event: [tag, push, deployment, cron, manual]
   branch: [main]
